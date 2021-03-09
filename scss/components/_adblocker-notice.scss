@@ -1,0 +1,27 @@
+.adblocker-notice {
+   display: none;
+   width: 30rem;
+   background-color: $color-secondary;
+   color: $color-black;
+   font-size: 2.0rem;
+   transform: translateX(-100%);
+   transition: transform .5s;
+   
+   position: absolute;
+   top: 10rem;
+   left: 0;
+   
+   &__display {
+      display: block;
+      animation: slideInLeft .5s .5s forwards;
+   }
+}
+
+@keyframes slideInLeft {
+   0% {
+      transform: translateX(-100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}

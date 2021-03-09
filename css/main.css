@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  position: relative;
+  background-color: #2877D2;
+  height: 95vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
+
+.aboutme {
+  background-color: white;
+  height: 500px;
+}
+
+.portfolio {
+  background-color: white;
+  height: 500px;
+}
+
+.rates {
+  background-color: white;
+  height: 500px;
+}
+
+.scrollable {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.is-visible {
+  background-color: blue;
+  -webkit-transition: all .5s .25s;
+  -o-transition: all .5s .25s;
+  transition: all .5s .25s;
+  opacity: 1;
+}
+
+.adblocker-notice {
+  display: none;
+  width: 30rem;
+  background-color: #FD862C;
+  color: #0A213B;
+  font-size: 2.0rem;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+}
+
+.adblocker-notice__display {
+  display: block;
+  -webkit-animation: slideInLeft .5s .5s forwards;
+          animation: slideInLeft .5s .5s forwards;
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
