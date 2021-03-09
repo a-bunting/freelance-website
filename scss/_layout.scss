@@ -1,17 +1,12 @@
 *, *::before, *::after {
    margin: 0;
    padding: 0;
+   box-sizing: inherit;
 }
 
 html {
-   font-size: 62.5%;
-}
-
-.header {
-   position: relative;
-   background-color: $color-primary-main;
-   height: 95vh;
-   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 .aboutme {

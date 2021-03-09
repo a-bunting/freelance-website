@@ -6,6 +6,7 @@ async function detectAdblock() {
     let isBlocked;
     async function tryRequest() {
         try {
+            // if the fetch doesnt work then assume its all blocked...
             return fetch(
             // test if google ads are accessible...
             new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
