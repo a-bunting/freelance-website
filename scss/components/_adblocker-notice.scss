@@ -4,7 +4,7 @@
    background-color: $color-secondary;
    color: $color-black;
    font-size: 2.0rem;
-   transform: translateX(-100%);
+   transform: translateX(-100%) skewY(3deg);
    transition: transform .5s;
    
    position: absolute;
@@ -19,15 +19,15 @@
 
 @keyframes slideInLeft {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-100%) skewY(3deg);
     }
     20% {
-        transform: translateX(0);
+        transform: translateX(0) skewY(3deg);
     }
     80% {
-        transform: translateX(0);
+        transform: translateX(0) skewY(3deg);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%) skewY(3deg);
     }
 }

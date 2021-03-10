@@ -6,8 +6,9 @@ header {
 
     font-family: 'Josefin-Sans', sans-serif;
     position: relative;
-    height: 95vh;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    height: 80vh;
+    // clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    transform: skewY(-3deg) translateY(4rem);
     background-image: linear-gradient(to bottom right, $color-primary-dark, $color-primary-light);
 
     &__logo {
@@ -15,7 +16,7 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -70%);
+        transform: translate(-50%, -50%) skewY(3deg);
         
         font-weight: 500;
 
@@ -37,9 +38,9 @@ header {
     }
 
     &__slogan {
-        text-transform: uppercase;
-        font-size: 8rem;
-        padding: 1rem;
+        font-size: 4rem;
+        padding: 0;
+        letter-spacing: 1rem;
     }
 
     // name Alex and Bunting
@@ -71,4 +72,41 @@ header {
         }
     }
 
+    &__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        background-color: $color-primary-dark;
+    }
+
+}
+
+.menu {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: $color-primary-dark;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        padding: 1rem 2rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $color-secondary;
+        text-decoration: none;
+        transition: transform .2s;
+
+        &:hover {
+            transform: translateY(-.6rem);
+            text-shadow: 0 .4rem .1rem black;
+        }
+    }
 }
