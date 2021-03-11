@@ -27,60 +27,95 @@ header {
         text-align: center;
     }
     
-    &__name {
-        display: flex;
-        flex-wrap: nowrap;
-        font-weight: bolder;
-        color: transparent;
-        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
-        -webkit-background-clip: text;
-        padding: 1rem;
+      &__name {
+         position: relative;
+         display: flex;
+         flex-wrap: nowrap;
+         font-weight: bolder;
+         color: transparent;
+         background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+         background-clip: text;
+         -webkit-background-clip: text;
+         padding: 1rem;
+         animation: letterSpacingMoveIn 1s .2s forwards;
+         opacity: 0;
+         overflow: hidden;
+
+      //   &::after {
+      //      content: "";
+      //      position: absolute;
+      //      left: 5rem;
+      //      top: 0;
+      //      height: 100%;
+      //      width: 5rem;
+      //      background-image: linear-gradient(to right, transparent, rgba(white, .5), transparent);
+      //    }
+
+      //    &:hover &::after {
+      //       left: 15rem;
+      //    }
     }
 
-    &__slogan {
-        font-size: 4rem;
-        padding: 0;
-        letter-spacing: 1rem;
-    }
+      &__slogan {
+         font-size: 4rem;
+         padding: 0;
+         letter-spacing: 1rem;
+         color: black;
+         position: relative;
 
-    // name Alex and Bunting
-    &__forename {
-        margin-right: 1rem;
-        // custom text shadow
-        &::after {
-            content: "Alex";
+         &::after {
+            content: "Web Design";
             position: absolute;
-            top: .7rem;
-            left: .7rem;
-            color: black;
-            z-index: -1;
-            padding: 1rem;
-        }
-    }
-    
-    &__surname {
-        margin-left: 1rem;
-        // custom text shadow
-        &::before {
-            content: "Bunting";
-            position: absolute;
-            top: .7rem;
-            right: .7rem;
-            color: black;
-            z-index: -1;
-            padding: 1rem;
-        }
-    }
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-    &__top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5rem;
-        background-color: $color-primary-dark;
-    }
+            color: transparent;
+            background-image: linear-gradient(to right, transparent 0%, rgba(white, .8) 10%, transparent 100%);
+            background-position-x: -10rem;
+            background-repeat: no-repeat;
+            
+            -webkit-background-clip: text;
+            background-clip: text;
+            transition: all .5s;
+         }
+      }
 
+      &__name:hover &__slogan::after {
+         background-position-x: 30rem;
+      }
+         
+      // name Alex and Bunting
+      &__forename {
+         margin-right: 1rem;
+      }
+
+      &__surname {
+         margin-left: 1rem;
+      }
+
+      &__top {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 5rem;
+         background-color: $color-primary-dark;
+         transform: translateX(100%);
+         animation: slideInRight .5s .5s forwards
+      }
+
+}
+
+@keyframes letterSpacingMoveIn {
+   0% {
+      letter-spacing: 20rem;
+      opacity: 0;
+   }
+   100% {
+      letter-spacing: .5rem;
+      opacity: 1;
+   }
 }
 
 .menu {
@@ -91,6 +126,8 @@ header {
     width: 100%;
     height: 5rem;
     background-color: $color-primary-dark;
+    transform: translate(-100%);
+    animation: slideInLeft .5s .5s forwards;
 
     display: flex;
     justify-content: center;
@@ -109,4 +146,22 @@ header {
             text-shadow: 0 .4rem .1rem black;
         }
     }
+}
+
+@keyframes slideInLeft {
+   0% {
+       transform: translateX(-100%);
+   }
+   100% {
+       transform: translateX(0);
+   }
+}
+
+@keyframes slideInRight {
+   0% {
+       transform: translateX(100%);
+   }
+   100% {
+       transform: translateX(0);
+   }
 }
