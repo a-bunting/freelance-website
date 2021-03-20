@@ -1,0 +1,15 @@
+.animation-delay--2s { animation-delay: 2s; }
+
+.animation-glow {
+    animation: glow-animation-kf 2s ease-in-out infinite;
+}
+
+@keyframes glow-animation-kf {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0rem .5rem $color-primary-light;
+    }
+}
+

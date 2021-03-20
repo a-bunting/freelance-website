@@ -1,10 +1,53 @@
-$color-primary-light: #63a6f3;
-$color-primary-main: #2877D2;
-$color-primary-dark: #082a52;
-
-$color-secondary-light: #f8b582;
-$color-secondary: #e47521;
-$color-secondary-dark: #b35106;
+$color-primary-lightest: #F0D4BF;
+$color-primary-light: #F1D11C;
+$color-primary-main: #E59E10;
+$color-primary-dark: #E66C0E;
+$color-secondary-light: #2F290B;
+$color-secondary: #2F290B;
+$color-secondary-dark: #2F290B;
 
 $color-white: #fff;
 $color-black: #0A213B;
+
+
+.mb-sm { margin-bottom: 1rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 5rem; }
+.mb-hg { margin-bottom: 8rem; }
+
+.mt-sm { margin-top: 1rem; }
+.mt-md { margin-top: 3rem; }
+.mt-lg { margin-top: 5rem; }
+.mt-hg { margin-top: 8rem; }
+
+.header-section {
+    text-align: center;
+    font-family: inherit;
+
+    width: 100%;
+
+    background-image: linear-gradient(to right, transparent 20%, rgba($color-primary-dark, .9), transparent 80%);
+
+    padding: 2rem 0;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: $color-secondary;
+    text-decoration: none;
+    transition: transform .2s, text-shadow .2s;
+
+    &:target {
+        color: blue;
+    }
+}
+
+/*  temporary */
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity .3s;
+}

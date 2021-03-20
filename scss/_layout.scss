@@ -10,22 +10,17 @@ html {
 }
 
 body {
-    background-color: $color-secondary-light;
+    font-family: 'Josefin-Sans', sans-serif;
 }
 
-.aboutme {
-   background-color: white;
-   height: 500px;
-}
-
-.portfolio {
-   background-color: white;
-   height: 500px;
-}
-
-.rates {
-   background-color: white;
-   height: 500px;
+// fixed div at the top of the page so navigation doesnt jump
+// when closing popups.
+#a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    visibility: hidden;
 }
 
 .scrollable {

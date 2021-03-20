@@ -11,6 +11,7 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter|Lato"> <!--Bitter and Lato Combo -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik|Poppins"> <!--Rubik and Poppins Combo -->
 
+   <script src="code/generic.js"></script>
    <script src="code/scroller-code.js"></script>
    <script src="code/detect-adblock.js"></script>
    
@@ -18,54 +19,186 @@
 </head>
 <body>
    
+    <div id="a" class="floating__anchor">&nbsp;</div>
+
    <header>
         <div class="header">
             <div class="adblocker-notice">
                You are using an adblocker, HURRAH!!
             </div>
-
-            <div class="header__top">
-                &nbsp;
-            </div>
       
             <div class="header__logo">
-                  <div class="header__name">
-                      <div class="header__forename">Alex</div>
-                      <div class="header__surname">Bunting</div>
-                  </div>
-                  <div class="header__slogan">Web Design</div>
+                <div class="header__name">
+                    <div class="header__forename">Alex</div>
+                    <div class="header__surname">Bunting</div>
+                </div>
+                <div class="header__text">
+                    Web design for <span class="animation-glow animation-delay--2s">small business</span> and personal projects.
+                </div>
             </div>
+            
 
-            <div class="menu">
-                <a href="#" class="menu__item">Alex</a>
-                <a href="#" class="menu__item">Portfolio</a>
-                <a href="#" class="menu__item">Stuff I can do</a>
-                <a href="#" class="menu__item">Moneys</a>
-            </div>
         </div>
-   </header>
+    </header>
+    
+    <nav class="menu">
+        <a href="#aboutme" class="menu__item">Alex</a>
+        <a href="#portfolio" class="menu__item">Portfolio</a>
+        <a href="#rates" class="menu__item">Plans</a>
+    </nav>
 
    <main>
 
-      <div id="aboutme" class="aboutme">
-         about me
+    <section id="aboutme" class="aboutme scrollFadeEffect">
 
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut placeat consectetur suscipit. Similique commodi, quibusdam harum odit, dolor aspernatur aliquam maxime delectus molestias blanditiis nulla dolorum voluptate. Aliquam, in quas?</p>
-      </div>
-      
-      
-      <div id="portfolio" class="portfolio">
-         portfolio
+        <div class="aboutme__image">
+            <img src="./images/alex-big.jpg" alt="Alex Bunting" class="aboutme__picture">
+        </div>
+        <div class="aboutme__content">
 
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut placeat consectetur suscipit. Similique commodi, quibusdam harum odit, dolor aspernatur aliquam maxime delectus molestias blanditiis nulla dolorum voluptate. Aliquam, in quas?</p>
-      </div>
+            <div class="aboutme__spiel">
+                <p>Hi, I am Alex Bunting and I am a freelance webdesigner specialising in websites for small businesses and individuals who seek a leg up in their industry.</p>
+                <p>I have only recently turned professional but have been designing websites for over 15 years. Have a look at some of my portfolio below for some examples of my work.</p>
+            </div>
+            <div class="aboutme__skills">
+                <div class="aboutme__qualification">
+                    <div class="aboutme__qualification--image">
+                        <img src="./images/HTML_Logo2.svg" alt="HTML5 Logo" class="aboutme__qualification--image--src">
+                    </div>
+                    <div class="aboutme__qualification--skill">HTML5</div>
+                    <div class="aboutme__qualification--detail">Modern markup which search engines can interpret</div>
+                </div>
+                <div class="aboutme__qualification">
+                    <div class="aboutme__qualification--image">
+                        <img src="./images/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="aboutme__qualification--image--src">
+                    </div>
+                    <div class="aboutme__qualification--skill">CSS</div>
+                    <div class="aboutme__qualification--detail">Adaptive styling for mobile, laptop, desktop or printer</div>
+                </div>
+                <div class="aboutme__qualification">
+                    <div class="aboutme__qualification--image">
+                        <img src="./images/Typescript_logo_2020.svg" alt="Typescript Logo" class="aboutme__qualification--image--src">
+                    </div>
+                    <div class="aboutme__qualification--skill">Typescript</div>
+                    <div class="aboutme__qualification--detail">Bug lite Javascript for dyanmic website content</div>
+                </div>
+                <div class="aboutme__qualification">
+                    <div class="aboutme__qualification--image">
+                        <img src="./images/Angular_trimmed.svg" alt="Angular Logo" class="aboutme__qualification--image--src">
+                    </div>
+                    <div class="aboutme__qualification--skill">Angular 10</div>
+                    <div class="aboutme__qualification--detail">Highly interactive user experiences for more sophisticated wbesites</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
       
-      
-      <div id="rates" class="rates">
-         rates
+    <h1 class="header-section mb-hg">Portfolio</h1>  
 
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut placeat consectetur suscipit. Similique commodi, quibusdam harum odit, dolor aspernatur aliquam maxime delectus molestias blanditiis nulla dolorum voluptate. Aliquam, in quas?</p>
-      </div>
+    <section id="portfolio" class="portfolio scrollFadeEffect">
+
+        <div class="portfolio__container">
+
+            <div class="portfolio__item portfolio__item--1">
+                <div class="portfolio__content">
+                    <div class="portfolio__text">Apollo</div>
+                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio__item portfolio__item--1">
+                <div class="portfolio__content">
+                    <div class="portfolio__text">Apollo</div>
+                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio__item portfolio__item--1">
+                <div class="portfolio__content">
+                    <div class="portfolio__text">Apollo</div>
+                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio__item portfolio__item--1">
+                <div class="portfolio__content">
+                    <div class="portfolio__text">Apollo</div>
+                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio__item portfolio__item--1">
+                <div class="portfolio__content">
+                    <div class="portfolio__text">Apollo</div>
+                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </section>
+
+    <div id="info" class="info">
+        <a href="#a" class="info__close">&cross;</a>
+
+        <div id="info__file">
+            
+        </div>
+    </div>
+      
+    <h1 class="header-section mt-hg">Rates and Packages</h1>  
+      
+    <section id="rates" class="rates scrollFadeEffect">
+
+        <p>So you can have a better idea of what the costs may be in your decision to get a new website, its beneficial to know the costs associated so you can make the best decisions. I try to be as upfront as I can about costs, so you can make the best decision for you. Find my table of costs lised below for typical websites (i.e. costs might change if you need more).</p>
+
+        <table class="rates__table">
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th colspan="2">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="rates__name">Personalised Template Website</div>
+                        <div class="rates__description">This website can be selected from one of my growing number of designs in my templates.</div>
+                    </td>
+                    <td class="rates__cost">100 GBP</td>
+                    <td rowspan="4" class="rates__support">
+                        <div class="rates__name">Support stuff</div>
+                        <div class="rates__description">All websites include one yearly content update for the first two years.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="rates__name">Fully Personalised Website</div>
+                        <div class="rates__description">This website is handcrafted especially for you - with your ideas and your personality built in.</div>
+                    </td>
+                    <td class="rates__cost">150 GBP</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="rates__name">Small Business Website</div>
+                        <div class="rates__description">For small businesses I can provide you with a range of different options - these can be single page websites advertising your product with contact information, or as deep as a fully features online shop, with a card, ording options, and a back-end for you to update the site with new products.</div>
+                    </td>
+                    <td class="rates__cost">150 GBP</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>I have a range of different options, and so to help you make a decision I have made a quote generator which will give you an approximate value as soon as you tell it things!.</p>
+
+    </section>
       
    </main>
    

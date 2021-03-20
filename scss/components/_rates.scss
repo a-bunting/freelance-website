@@ -1,0 +1,65 @@
+.rates {
+
+    width: 80vw;
+    margin: 0 auto;
+
+    &__table {
+        
+        border-spacing: 0;
+        transition: all .2s;
+        
+        th {
+            font-size: 2rem;
+            text-align: left;
+            background-color: #dddddd;
+            padding: 1.5rem;
+        }
+        
+        tr {
+
+            &:hover {
+                background-color: $color-primary-light;
+            }
+        }
+        
+        tr:nth-of-type(odd) {
+            background-color: #aaaaaa;
+        }
+        tr:nth-of-type(even) {
+            background-color: #bbbbbb;
+        }
+        
+        td {
+            padding: 1.5rem;
+        }
+    }
+    
+    &__name {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    &__description {
+        font-size: 1.5rem;
+        font-family: "Lato", sans-serif;
+        letter-spacing: .1rem;
+        line-height: 2.2rem;
+    }
+
+    &__cost {
+        font-size: 1.6rem;
+    }
+
+    &__support {
+        background-color: $color-primary-main;
+    }
+
+    p {
+        font-size: 1.6rem;
+        margin: 2rem 0;
+        font-family: "Lato", sans-serif;
+        letter-spacing: .1rem;
+        line-height: 2.2rem;
+    }
+}

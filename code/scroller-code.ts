@@ -14,7 +14,17 @@ var elementsToShow: NodeList;
 var scroller: any;   // for lack of a better type for typescript 
 
 function loadedReadyToScroll(): void {
-   // loop the function in the animation frame.
+    // style 1
+    // this version just uses an InterSection observer
+    let targets: NodeList = document.querySelectorAll('.scrollFadeEffect');
+
+    targets.forEach((target: Element) => {
+        fadeOnScrollObserver.observe(target);
+    });
+
+    // style 2
+    // this uses animation frame
+    // loop the function in the animation frame.
    scroller = window.requestAnimationFrame || function(callback) {
       window.setTimeout(callback, 1000/60);
    }
@@ -89,3 +99,26 @@ document.addEventListener("scroll", function(): void {
 
    previousScrollYPos = position <= 0 ? 0 : position; // apparantly negative scrolling is a thing?
 });
+
+
+/**
+ * This takes all elements with the scrollFadeEffect class and will fade it
+ * in between 30 and 60% visible, and fade it out around that.
+ */
+let fadeOnScrollObserver = new IntersectionObserver(e => 
+    {
+        e.forEach(element => {
+            if(element.isIntersecting) {
+                document.querySelector("#"+element.target.id).classList.add('fadeIn');
+                document.querySelector("#"+element.target.id).classList.remove('fadeOut');
+            } else {
+                document.querySelector("#"+element.target.id).classList.add('fadeOut');
+                document.querySelector("#"+element.target.id).classList.remove('fadeIn');
+            }
+        });
+    }, 
+    {    
+        rootMargin: '0px', 
+        threshold: [0.3, 0.6]
+    }
+);
