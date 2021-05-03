@@ -13,3 +13,63 @@
     }
 }
 
+
+ // used in adblocked
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%) skewY(3deg);
+    }
+    20% {
+        transform: translateX(0) skewY(3deg);
+    }
+    80% {
+        transform: translateX(0) skewY(3deg);
+    }
+    100% {
+        transform: translateX(-100%) skewY(3deg);
+    }
+}
+
+// used in herader
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translate(-100%, -7rem);
+    }
+    100% {
+        transform: translate(0, -7rem);
+    }
+ }
+ 
+ @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+ }
+ 
+ 
+ @keyframes fadeIn {
+     0% {
+        opacity: 0;
+     }
+     100% {
+        opacity: 1;
+     }
+  }
+
+  @keyframes fadeInAndResizeOnTop {
+    0% {
+        opacity: 0;
+        z-index: 250;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 1;
+        z-index: 250;
+        transform: translate(-50%, -50%) scale(1);
+     }
+  }

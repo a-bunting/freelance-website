@@ -41,7 +41,7 @@ header {
         color: transparent;
         background-image: linear-gradient(to bottom right, $color-secondary, $color-secondary);
         background-clip: text;
-        animation: letterSpacingMoveIn 2s 1s forwards;
+        animation: fadeIn 2s 1s forwards;
         opacity: 0;
         overflow: hidden;
         filter: drop-shadow(.2rem .2rem .2rem white);
@@ -105,35 +105,5 @@ header {
         }
     }
 }
-
-@keyframes slideInLeft {
-   0% {
-       transform: translate(-100%, -7rem);
-   }
-   100% {
-       transform: translate(0, -7rem);
-   }
-}
-
-@keyframes slideInRight {
-   0% {
-       transform: translateX(100%);
-   }
-   100% {
-       transform: translateX(0);
-   }
-}
-
-
-@keyframes letterSpacingMoveIn {
-    0% {
-       //letter-spacing: 20rem;
-       opacity: 0;
-    }
-    100% {
-       //letter-spacing: .5rem;
-       opacity: 1;
-    }
- }
 
  

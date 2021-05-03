@@ -13,7 +13,6 @@
 
    <script src="code/generic.js"></script>
    <script src="code/scroller-code.js"></script>
-   <script src="code/detect-adblock.js"></script>
    
    <title>Alex Bunting Web Design</title>
 </head>
@@ -23,9 +22,6 @@
 
    <header>
         <div class="header">
-            <div class="adblocker-notice">
-               You are using an adblocker, HURRAH!!
-            </div>
       
             <div class="header__logo">
                 <div class="header__name">
@@ -104,7 +100,7 @@
                 <div class="portfolio__content">
                     <div class="portfolio__text">Apollo</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
                     </a>
                 </div>
             </div>
@@ -112,7 +108,7 @@
                 <div class="portfolio__content">
                     <div class="portfolio__text">Apollo</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
                     </a>
                 </div>
             </div>
@@ -120,7 +116,7 @@
                 <div class="portfolio__content">
                     <div class="portfolio__text">Apollo</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
                     </a>
                 </div>
             </div>
@@ -128,7 +124,7 @@
                 <div class="portfolio__content">
                     <div class="portfolio__text">Apollo</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
                     </a>
                 </div>
             </div>
@@ -136,7 +132,7 @@
                 <div class="portfolio__content">
                     <div class="portfolio__text">Apollo</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
+                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
                     </a>
                 </div>
             </div>
@@ -147,11 +143,7 @@
     </section>
 
     <div id="info" class="info">
-        <a href="#a" class="info__close">&cross;</a>
-
-        <div id="info__file">
-            
-        </div>
+        <div id="info__file"></div>
     </div>
       
     <h1 class="header-section mt-hg">Rates and Packages</h1>  
@@ -172,17 +164,21 @@
                     <td>
                         <div class="rates__name">Personalised Template Website</div>
                         <div class="rates__description">This website can be selected from one of my growing number of designs in my templates.</div>
+                        <div class="rates__example">Example 1</div>
                     </td>
                     <td class="rates__cost">100 GBP</td>
                     <td rowspan="4" class="rates__support">
-                        <div class="rates__name">Support stuff</div>
-                        <div class="rates__description">All websites include one yearly content update for the first two years.</div>
+                        <div class="rates__name">Support</div>
+                        <div class="rates__description">All websites include one yearly content update for the first two years. All websites are also designed to be fully responsive, meaning you can rest assured it will look good from mobile to larger desktop computers.</div>
+                        <div class="rates__name">Support</div>
+                        <div class="rates__description">I also offer packages for hosting your website, either through an yourwebsite.alexbunting.com address or on your own web location.</div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="rates__name">Fully Personalised Website</div>
                         <div class="rates__description">This website is handcrafted especially for you - with your ideas and your personality built in.</div>
+                        <div class="rates__example">Example 1</div>
                     </td>
                     <td class="rates__cost">150 GBP</td>
                 </tr>
@@ -190,6 +186,7 @@
                     <td>
                         <div class="rates__name">Small Business Website</div>
                         <div class="rates__description">For small businesses I can provide you with a range of different options - these can be single page websites advertising your product with contact information, or as deep as a fully features online shop, with a card, ording options, and a back-end for you to update the site with new products.</div>
+                        <div class="rates__example">Example 1</div>
                     </td>
                     <td class="rates__cost">150 GBP</td>
                 </tr>
