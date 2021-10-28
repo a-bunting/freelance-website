@@ -45,6 +45,7 @@
         <a href="#aboutme" class="menu__item">Alex</a>
         <a href="#portfolio" class="menu__item">Portfolio</a>
         <a href="#rates" class="menu__item">Plans</a>
+        <!-- <a href="#contact" class="menu__item">Contact</a> -->
     </nav>
 
    <main>
@@ -57,7 +58,7 @@
         <div class="aboutme__content">
 
             <div class="aboutme__spiel">
-                <p>Hi, I am Alex Bunting and I am a freelance webdesigner specialising in websites for small businesses and individuals who seek a leg up in their industry.</p>
+                <p>Hi, I am Alex Bunting and I am a freelance webdesigner specialising in websites for small businesses and individuals.</p>
                 <p>I have only recently turned professional but have been designing websites for over 15 years. Have a look at some of my portfolio below for some examples of my work.</p>
             </div>
             <div class="aboutme__skills">
@@ -72,7 +73,7 @@
                     <div class="aboutme__qualification--image">
                         <img src="./images/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="aboutme__qualification--image--src">
                     </div>
-                    <div class="aboutme__qualification--skill">CSS</div>
+                    <div class="aboutme__qualification--skill">CSS (SCSS pre)</div>
                     <div class="aboutme__qualification--detail">Adaptive styling for mobile, laptop, desktop or printer</div>
                 </div>
                 <div class="aboutme__qualification">
@@ -80,13 +81,13 @@
                         <img src="./images/Typescript_logo_2020.svg" alt="Typescript Logo" class="aboutme__qualification--image--src">
                     </div>
                     <div class="aboutme__qualification--skill">Typescript</div>
-                    <div class="aboutme__qualification--detail">Bug lite Javascript for dyanmic website content</div>
+                    <div class="aboutme__qualification--detail">Bug lite Javascript for dynamic website content</div>
                 </div>
                 <div class="aboutme__qualification">
                     <div class="aboutme__qualification--image">
                         <img src="./images/Angular_trimmed.svg" alt="Angular Logo" class="aboutme__qualification--image--src">
                     </div>
-                    <div class="aboutme__qualification--skill">Angular 10</div>
+                    <div class="aboutme__qualification--skill">Angular2</div>
                     <div class="aboutme__qualification--detail">Highly interactive user experiences for more sophisticated wbesites</div>
                 </div>
                 
@@ -102,45 +103,28 @@
 
             <div class="portfolio__item portfolio__item--1">
                 <div class="portfolio__content">
-                    <div class="portfolio__text">Apollo</div>
-                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                    <div class="portfolio__text">Reports</div>
+                    <a href="#info" onclick="loadPortfolioPiece('reports')">
                         <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
                     </a>
                 </div>
             </div>
             <div class="portfolio__item portfolio__item--1">
                 <div class="portfolio__content">
-                    <div class="portfolio__text">Apollo</div>
-                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
+                    <div class="portfolio__text">!This>#Phys</div>
+                    <a href="#info" onclick="loadPortfolioPiece('physics')">
                         <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
                     </a>
                 </div>
             </div>
             <div class="portfolio__item portfolio__item--1">
                 <div class="portfolio__content">
-                    <div class="portfolio__text">Apollo</div>
+                    <div class="portfolio__text">Cartel</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
                         <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
                     </a>
                 </div>
             </div>
-            <div class="portfolio__item portfolio__item--1">
-                <div class="portfolio__content">
-                    <div class="portfolio__text">Apollo</div>
-                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio__item portfolio__item--1">
-                <div class="portfolio__content">
-                    <div class="portfolio__text">Apollo</div>
-                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
-                    </a>
-                </div>
-            </div>
-            
         </div>
 
         
@@ -203,12 +187,35 @@
    </main>
    
    <footer>
-      Footer
+    
+       <!-- <div id="contact" class="contact scrollFadeEffect"> -->
+       <div id="contact" class="contact">
+           <div class="contact__text">Contact Me</div>
+           <div class="contact__field-name">Name</div>
+           <div class="contact__field-input">
+               <input type="text" name="name" id="name" class="contact__input contact__text-input">
+            </div>
+            <div class="contact__field-name">Email</div>
+            <div class="contact__field-input">
+                <input type="email" name="email" id="email" class="contact__input contact__text-input">
+            </div>
+            <div class="contact__field-name">Message</div>
+            <div class="contact__field-input">
+                <textarea name="message" id="message" class="contact__input contact__textarea-input"></textarea>
+            </div>
+            <div class="contact__submit-button">
+                Send Message
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Website created by Alex Bunting. If you want to know more about me or my work, please use the form to the left to contact me.</p>
+            <p>This website does not collect or store any data about you. Emailing me stores your email and name (and any other info you provide in your message) in my email only.</p>
+            
+        </div>
+
    </footer>
 
-   <div id="contact" class="popup contact">
-      contact me
-   </div>
 
 </body>
 </html>
