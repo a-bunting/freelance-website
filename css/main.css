@@ -436,6 +436,109 @@ body {
           filter: grayscale(0);
 }
 
+footer {
+  width: 100%;
+  -webkit-box-shadow: 0 -.2rem .4rem black;
+          box-shadow: 0 -.2rem .4rem black;
+  background-color: #E59E10;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer {
+  font-size: 1.4rem;
+  font-style: italic;
+  justify-self: flex-start;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  width: 40rem;
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  letter-spacing: .15rem;
+}
+
+.contact {
+  justify-self: flex-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 8rem 32rem;
+      grid-template-columns: 8rem 32rem;
+  row-gap: .8rem;
+  font-size: 1.6rem;
+  width: 40rem;
+  margin-bottom: 1rem;
+}
+
+.contact__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.contact__field-name {
+  text-align: left;
+  -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
+  padding: .5rem;
+}
+
+.contact__input {
+  width: 100%;
+  -webkit-border-radius: 1rem;
+          border-radius: 1rem;
+  letter-spacing: .1rem;
+  padding: .6rem 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.contact__textarea-input {
+  height: 10rem;
+}
+
+.contact__submit-button {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  width: 15rem;
+  padding: 1rem 2rem;
+  -webkit-border-radius: 1rem;
+          border-radius: 1rem;
+  background-color: #F1D11C;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  -webkit-box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.6);
+}
+
+.contact__submit-button:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-0.3rem);
+      -ms-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  background-color: #E66C0E;
+  -webkit-box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.6);
+}
+
 header {
   -webkit-filter: drop-shadow(0 1rem 1rem black);
           filter: drop-shadow(0 1rem 1rem black);

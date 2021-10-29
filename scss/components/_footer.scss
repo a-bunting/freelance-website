@@ -1,0 +1,87 @@
+footer {
+    width: 100%;
+    box-shadow: 0 -.2rem .4rem black;
+    background-color: $color-primary-main;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    font-size: 1.4rem;
+    font-style: italic;
+    justify-self: flex-start;
+    align-self: center;
+    width: 40rem;
+    padding: 1rem 1rem 1rem 2rem;
+
+    p {
+        margin-bottom: 1rem;
+        line-height: 2rem;
+        letter-spacing: .15rem;
+    }
+}
+
+.contact {
+
+    justify-self: flex-end;
+
+    display: grid;
+    grid-template-columns: 8rem 32rem;
+    row-gap: .8rem;
+    font-size: 1.6rem;
+    width: 40rem;
+    margin-bottom: 1rem;
+
+    &__text {
+        grid-column: 1 / 3;
+        padding: 1rem 0;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    &__field-name {
+        text-align: left;
+        align-self: baseline;
+        padding: .5rem;
+    }
+
+    &__field-input {
+
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 1rem;
+        letter-spacing: .1rem;
+        padding: .6rem 1.2rem;
+        border: 1px solid rgba(black, .3);
+    }
+
+    &__text-input {
+    }
+    
+    &__textarea-input {
+        height: 10rem;
+    }
+
+    &__submit-button {
+        grid-column: 2 / 3;
+        width: 15rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        background-color: $color-primary-light;
+        transition: all .2s;
+        box-shadow: 0 .2rem .4rem rgba(black, .6);
+        
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-.3rem);
+            background-color: $color-primary-dark;
+            box-shadow: 0 .4rem .8rem rgba(black, .6);
+        }
+    }
+
+}
