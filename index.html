@@ -45,6 +45,7 @@
     <nav class="menu">
         <a href="#aboutme" class="menu__item">Alex</a>
         <a href="#portfolio" class="menu__item">Portfolio</a>
+        <a href="#blog" class="menu__item">Blog</a>
         <a href="#rates" class="menu__item">Plans</a>
         <!-- <a href="#contact" class="menu__item">Contact</a> -->
     </nav>
@@ -121,6 +122,14 @@
             <div class="portfolio__item portfolio__item--1">
                 <div class="portfolio__content">
                     <div class="portfolio__text">Cartel</div>
+                    <a href="#info" onclick="loadPortfolioPiece('cartel')">
+                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio__item portfolio__item--1">
+                <div class="portfolio__content">
+                    <div class="portfolio__text">Apollo</div>
                     <a href="#info" onclick="loadPortfolioPiece('apollo')">
                         <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
                     </a>
@@ -132,11 +141,43 @@
     </section>
 
     <div id="info" class="info">
+        <a href="#a" class="info__close">&cross;</a>
         <div id="info__file"></div>
     </div>
       
+    <h1 class="header-section mt-hg">Blog</h1>  
+    
+    <section id="blog" class="rates scrollFadeEffect">
+
+        <p>I keep a blog to help my development process. Click here to see the complete archive or see some of the more recent posts below.</p>
+        
+        <div class="blog__posts">
+            <div class="blog__post">
+                <div class="blog__post--name">Blog Post Name</div>
+                <div class="blog__post--summary">Blog Post Summary</div>
+            </div>
+            <div class="blog__post">
+                <div class="blog__post--name">Blog Post Name</div>
+                <div class="blog__post--summary">Blog Post Summary</div>
+            </div>
+            <div class="blog__post">
+                <div class="blog__post--name">Blog Post Name</div>
+                <div class="blog__post--summary">Blog Post Summary</div>
+            </div>
+            <div class="blog__post">
+                <div class="blog__post--name">Blog Post Name</div>
+                <div class="blog__post--summary">Blog Post Summary</div>
+            </div>
+            <div class="blog__post">
+                <div class="blog__post--name">Blog Post Name</div>
+                <div class="blog__post--summary">Blog Post Summary</div>
+            </div>
+        </div>
+
+    </section>
+    
     <h1 class="header-section mt-hg">Rates and Packages</h1>  
-      
+    
     <section id="rates" class="rates scrollFadeEffect">
 
         <p>So you can have a better idea of what the costs may be in your decision to get a new website, its beneficial to know the costs associated so you can make the best decisions. I try to be as upfront as I can about costs, so you can make the best decision for you. Find my table of costs lised below for typical websites (i.e. costs might change if you need more).</p>

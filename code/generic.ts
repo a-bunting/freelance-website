@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", videoPlays, false);
+document.addEventListener("DOMContentLoaded", domLoaded, false);
 
-function videoPlays() {
+/**
+ * Vheck if the user is trying to refresh a page with an info box open
+ * If they are, stop it attempting to load (as it wont have context for what to load)
+ */
+function domLoaded(): void {
+    if(location.hash) {
+        location.hash = 'a';
+    }
+}
+
+/**
+ * Play the video when a portfolio piece is hovered over.
+ */
+function videoPlays(): void {
     var video: HTMLCollectionOf<Element> = document.getElementsByClassName("portfolio__video");
 
     
@@ -17,6 +31,10 @@ function videoPlays() {
     }
 }
 
+/**
+ * Load a portfolio piece to be viewed.
+ * @param htmlString 
+ */
 function loadPortfolioPiece(htmlString: string): void {
     // code learning:
     // https://stackoverflow.com/questions/3535055/load-html-file-contents-to-div-without-the-use-of-iframes
