@@ -16,10 +16,11 @@ function videoPlays() {
     var video = document.getElementsByClassName("portfolio__video");
     for (var i = 0; i < video.length; i++) {
         let vid = video[i];
-        vid.addEventListener("mouseover", (e) => {
+        let parent = document.getElementById('portfolio'+i);
+        parent.addEventListener("mouseover", (e) => {
             vid.play();
         });
-        vid.addEventListener("mouseout", (e) => {
+        parent.addEventListener("mouseout", (e) => {
             vid.pause();
         });
     }
