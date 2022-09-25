@@ -1,0 +1,69 @@
+.video-popup {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+    background-color: rgba(200, 200, 200, .8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__video {
+        position: relative;
+        background-color: $color-primary-light;
+        box-shadow: .3rem 0 .6rem $color-secondary-dark;
+        padding: 2rem;
+        height: 80%;
+        border: .1rem solid black;
+        
+        &--video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        video {
+            // box-shadow: .1rem 0 .2rem $color-secondary-dark;
+        }
+    }
+
+    &__playpause {
+        position: absolute;
+        
+        background-color: rgba($color-primary-light, .6);
+        border-radius: 50%;
+        height: 10rem;
+        width: 10rem;
+        transform: translate(-50%, -50%);
+        font-size: 8rem;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        transition: all .2s;
+
+        span {
+            transform: translate(.2rem, -1rem);
+        }
+        
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($color-primary-light, 1);
+        }
+
+        &--play {
+            top: 50%;
+            left: 50%;
+        }
+
+        &--pause {
+            top: 90%;
+            left: 10%;
+        }
+    }
+
+}

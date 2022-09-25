@@ -25,6 +25,13 @@
    
     <div id="a" class="floating__anchor">&nbsp;</div>
 
+    <div class="video-popup">
+        <div class="video-popup__video">
+            <div class="video-popup__playpause video-popup__playpause--play" id="videoPlayPauseButton"><span>&#x23F5;</span></div>
+            <video src="./images/portfolio/reportzone/reportzone_intro_lowres.mp4" class="video-popup__video--video" loop></video>
+        </div>
+    </div>
+
    <header>
         <div class="header">
       
@@ -33,9 +40,6 @@
                     <div class="header__forename">Alex</div>
                     <div class="header__surname">Bunting</div>
                 </div>
-                <!-- <div class="header__text">
-                    Web design for <span class="animation-glow animation-delay--2s">small business</span> and personal projects.
-                </div> -->
             </div>
             
 
@@ -46,9 +50,6 @@
         <a href="#aboutme" class="menu__item">Alex</a>
         <a href="#portfolio" class="menu__item">Portfolio</a>
         <a href="#contact" class="menu__item">Contact</a>
-        <!-- <a href="#blog" class="menu__item">Blog</a>
-        <a href="#rates" class="menu__item">Plans</a> -->
-        <!-- <a href="#contact" class="menu__item">Contact</a> -->
     </nav>
 
    <main>
@@ -92,6 +93,13 @@
                     <div class="aboutme__qualification--skill">Angular2</div>
                     <div class="aboutme__qualification--detail">Highly interactive user experiences for more sophisticated wbesites</div>
                 </div>
+                <div class="aboutme__qualification">
+                    <div class="aboutme__qualification--image">
+                        <img src="./images/node.svg" alt="NodeJS Logo" class="aboutme__qualification--image--src">
+                    </div>
+                    <div class="aboutme__qualification--skill">Node</div>
+                    <div class="aboutme__qualification--detail">Javascript runtime environment outside of a web browser.</div>
+                </div>
                 
             </div>
         </div>
@@ -100,7 +108,7 @@
     <h1 class="header-section mb-hg">Portfolio New</h1>
     
     <section id="portfolio" class="portfolio scrollFadeEffect">
-            
+
         <div class="portfolio__site" id="portfolio0">
             <div class="portfolio__site--background">
                 <video src="./images/portfolio/reportzone/reportzone_intro_lowres.mp4" class="portfolio__video" loop></video>
@@ -121,13 +129,15 @@
                     </div>
 
                     <div class="portfolio__site--skills">
-                        <div class="portfolio__site--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
-                        <div class="portfolio__site--skill"><img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3"></div>
-                        <div class="portfolio__site--skill"><img src="/images/Angular_trimmed.svg" alt="Angular"></div>
+                        <div class="portfolio__site--skills--small">
+                            <img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                            <img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                            <img src="/images/Angular_trimmed.svg" alt="Angular">
+                        </div>
                     </div>
 
                     <div class="portfolio__site--links">
-                        <div class="portfolio__site--link"><a href="">GitHub</a></div>
+                        <div class="portfolio__site--link"><a href="https://github.com/Bogomip/reports">GitHub</a></div>
                         <div class="portfolio__site--link"><a href="https://www.reports.zone/">Live</a></div>
                     </div>
 
@@ -151,18 +161,23 @@
 
                     <div class="portfolio__site--description">
                         <div class="portfolio__site--paragraph">Wordleleague is a place for you to compete aginst your friends and family at Wordle.</div>
-                        <div class="portfolio__site--paragraph">It runs on a NodeExpress backend and MongoDB database, with an Angular2 frontend.</div>
+                        <div class="portfolio__site--paragraph">It runs on a Node MongoDB backend, with an Angular2 frontend.</div>
                     </div>
 
                     <div class="portfolio__site--skills">
-                        <div class="portfolio__site--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
-                        <div class="portfolio__site--skill"><img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3"></div>
-                        <div class="portfolio__site--skill"><img src="/images/Angular_trimmed.svg" alt="Angular"></div>
-                        <div class="portfolio__site--skill"><img src="/images/node.svg" alt="NodeJS"></div>
+                        <div class="portfolio__site--skills--small">
+                            <img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                            <img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                            <img src="/images/Angular_trimmed.svg" alt="Angular">
+                        </div>
+                        <div class="portfolio__site--skills--long">
+                            <img src="/images/node.svg" alt="NodeJS">
+                        </div>
                     </div>
 
                     <div class="portfolio__site--links">
-                        <div class="portfolio__site--link"><a href="">GitHub</a></div>
+                        <div class="portfolio__site--link"><a href="https://github.com/Bogomip/wordle-leagues">GitHub (Front)</a></div>
+                        <div class="portfolio__site--link"><a href="https://github.com/Bogomip/wordle-leagues-backend">GitHub (Back)</a></div>
                         <div class="portfolio__site--link"><a href="https://www.wordleleague.org/">Live</a></div>
                     </div>
 
@@ -172,37 +187,100 @@
 
         <div class="portfolio__site" id="portfolio2">
             <div class="portfolio__site--background">
-                <video src="./images/portfolio/wordleleague/WordleLeague.mp4" class="portfolio__video" loop></video>
+                <video src="./images/portfolio/rednova/Rednova (remake) Small.mp4" class="portfolio__video" loop></video>
             </div>
             <div class="portfolio__site--name">
-                <img src="/images/portfolio/wordleleague/logo.png" alt="Wordleleague Logo">
+                <img src="/images/portfolio/rednova/logo.png" alt="StellarNova Logo">
             </div>
             <div class="portfolio__site--hover">
                 <div class="portfolio__site--detail">
 
                     <div class="portfolio__site--logo">
-                        <img src="/images/portfolio/wordleleague/logo.png" alt="Wordleleague Logo">
+                        <img src="/images/portfolio/rednova/logo.png" alt="StellarNova Logo">
                     </div>
 
                     <div class="portfolio__site--description">
-                        <div class="portfolio__site--paragraph">Wordleleague is a place for you to compete aginst your friends and family at Wordle.</div>
-                        <div class="portfolio__site--paragraph">It runs on a NodeExpress backend and MongoDB database, with an Angular2 frontend.</div>
+                        <div class="portfolio__site--paragraph">A text based MMO space game.</div>
+                        <div class="portfolio__site--paragraph">It has a Node with MySQL backend, with an Angular2 frontend.</div>
                     </div>
 
                     <div class="portfolio__site--skills">
-                        <div class="portfolio__site--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
-                        <div class="portfolio__site--skill"><img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3"></div>
-                        <div class="portfolio__site--skill"><img src="/images/Angular_trimmed.svg" alt="Angular"></div>
-                        <div class="portfolio__site--skill"><img src="/images/node.svg" alt="NodeJS"></div>
+                        <div class="portfolio__site--skills--small">
+                            <img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5">
+                            <img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                            <img src="/images/Angular_trimmed.svg" alt="Angular">
+                        </div>
+                        <div class="portfolio__site--skills--long">
+                            <img src="/images/node.svg" alt="NodeJS">
+                        </div>
                     </div>
 
                     <div class="portfolio__site--links">
-                        <div class="portfolio__site--link"><a href="">GitHub</a></div>
-                        <div class="portfolio__site--link"><a href="https://www.wordleleague.org/">Live</a></div>
+                        <div class="portfolio__site--link"><a href="https://github.com/Bogomip/rednova/tree/main/rednova">GitHub</a></div>
+                        <div class="portfolio__site--link">Live coming soon!</div>
                     </div>
 
                 </div>
             </div>
+        </div>
+        
+
+        <div class="portfolio__minor">
+
+            <div class="portfolio__site--minor" id="portfolio3">
+
+                <div class="portfolio__site--background">
+                    <video src="./images/portfolio/physics/physicsvideo.mp4" class="portfolio__video" loop></video>
+                </div>
+                <div class="portfolio__site--name portfolio__site--name--phys">
+                    <div class="portfolio__site--name--phys1">!</div><div class="portfolio__site--name--phys2">T</div><div class="portfolio__site--name--phys3">h</div><div class="portfolio__site--name--phys4">i</div><div class="portfolio__site--name--phys5">s</div><div class="portfolio__site--name--phys6">></div><div class="portfolio__site--name--phys7">#</div><div class="portfolio__site--name--phys8">P</div><div class="portfolio__site--name--phys9">h</div><div class="portfolio__site--name--phys10">y</div><div class="portfolio__site--name--phys11">s</div>
+                </div>
+
+                <div class="portfolio__minor--info">
+                    <div class="portfolio__minor--description">
+                        !This>#Phys is primarily physics simulations which focus on data collection. It also hosts my maze and algorithm generators.
+                    </div>
+                    <div class="portfolio__minor--skills">
+                        <div class="portfolio__minor--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
+                        <div class="portfolio__minor--skill"><img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3"></div>
+                        <div class="portfolio__minor--skill"><img src="/images/Angular_trimmed.svg" alt="Angular"></div>
+                    </div>
+                </div>
+
+                <div class="portfolio__minor--links">
+                    <div class="portfolio__minor--link"><a href="https://github.com/Bogomip/physics-project">GitHub</a></div>
+                    <div class="portfolio__minor--link"><a href="https://physics.sweeto.co.uk/#/">Live</a></div>
+                </div>
+
+            </div>
+
+            <div class="portfolio__site--minor" id="portfolio4">
+                
+                <div class="portfolio__site--background">
+                    <video src="./images/portfolio/apollo/Apollo 0.95(1).mp4" class="portfolio__video" loop></video>
+                </div>
+                <div class="portfolio__site--name portfolio__site--name--apollo">
+                    Apollo
+                </div>
+
+                
+                <div class="portfolio__minor--info">
+                    <div class="portfolio__minor--description">
+                        Apollo is a transformative classroom tool to take the focus in classrooms off the teacher and back onto the learners.
+                    </div>
+                    <div class="portfolio__minor--skills">
+                        <div class="portfolio__minor--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
+                        <div class="portfolio__minor--skill"><img src="/images/CSS3_logo_and_wordmark.svg" alt="CSS3"></div>
+                        <div class="portfolio__minor--skill portfolio__minor--skill--small"><img src="/images/jQuery-Logo.png" alt="JQuery"></div>
+                    </div>
+                </div>
+
+                <div class="portfolio__minor--links">
+                    <div class="portfolio__minor--link"><a href="https://apollo.sweeto.co.uk/">Live</a></div>
+                </div>
+
+            </div>
+
         </div>
 
     </section>
@@ -420,3 +498,4 @@
 
 </body>
 </html>
+

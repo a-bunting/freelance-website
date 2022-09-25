@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", videoPlays, false);
 document.addEventListener("DOMContentLoaded", domLoaded, false);
 
+document.getElementById("videoPlayPauseButton").addEventListener("click", togglePlayVideo, false);
+
 /**
  * Vheck if the user is trying to refresh a page with an info box open
  * If they are, stop it attempting to load (as it wont have context for what to load)
@@ -43,4 +45,19 @@ function loadPortfolioPiece(htmlString: string): void {
         .then((html: string) => {
             document.getElementById('info__file').innerHTML = html;
         });
+}
+
+let playVideo: boolean = false;
+
+function togglePlayVideo(): void {
+    playVideo = !playVideo;
+
+    console.log(playVideo);
+
+    // video is playing now
+    if(playVideo) {
+        document.getElementById("togglePlayVideo").classList.add("video-popup__playpause--corner");
+    } else {
+        document.getElementById("togglePlayVideo").classList.remove("video-popup__playpause--corner");
+    }
 }
