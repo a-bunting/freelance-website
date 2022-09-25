@@ -1,2 +1,3 @@
-# freelance-website
- My website for my freelance web design business
+## Portfolio
+
+This is my portfolio website, so that people can see my work and decide to employ me.
