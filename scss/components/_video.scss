@@ -13,13 +13,19 @@
     justify-content: center;
     align-items: center;
 
+    transition: all .2s;
+
+    &__display { opacity: 1; visibility: visible; }
+    &__hide { opacity: 0; visibility: hidden; }
+
     &__video {
         position: relative;
         background-color: $color-primary-light;
         box-shadow: .3rem 0 .6rem $color-secondary-dark;
         padding: 2rem;
-        height: 80%;
+        width: 100vh;
         border: .1rem solid black;
+        z-index: 2000;
         
         &--video {
             width: 100%;
@@ -27,42 +33,57 @@
             object-fit: cover;
         }
 
-        video {
+        // video {
             // box-shadow: .1rem 0 .2rem $color-secondary-dark;
-        }
+        // }
     }
 
     &__playpause {
         position: absolute;
         
         background-color: rgba($color-primary-light, .6);
+        box-shadow: .2rem 0 .4rem rgba(black, .5);
         border-radius: 50%;
-        height: 10rem;
-        width: 10rem;
-        transform: translate(-50%, -50%);
+        height: 8rem;
+        width: 8rem;
         font-size: 8rem;
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
         transition: all .2s;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         span {
-            transform: translate(.2rem, -1rem);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all .2s;
+            transform: translate(20%, -25%);
         }
         
         &:hover {
             cursor: pointer;
             background-color: rgba($color-primary-light, 1);
-        }
+            box-shadow: .3rem 0 .6rem rgba(black, .8);
 
+            & > * { filter: invert(1); }
+        }
+        
         &--play {
             top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
         }
-
+        
         &--pause {
-            top: 90%;
-            left: 10%;
+            top: 3rem;
+            left: 3rem;
+            transform: translate(0, 0);
+            height: 5rem;
+            width: 5rem;
+            font-size: 5rem;
         }
     }
 

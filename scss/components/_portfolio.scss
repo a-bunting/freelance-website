@@ -6,6 +6,8 @@
     gap: 1rem;
     margin: 1rem;
 
+    padding-top: 10rem;
+
     &__minor {
         grid-row: 2 / 3;
         grid-column: 1 / 4;
@@ -77,7 +79,7 @@
         &--description {
             padding: 1rem 2rem;
             padding-right: 3rem;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             line-height: 2.4rem;
             letter-spacing: .1rem;
         }
@@ -292,7 +294,7 @@
             padding: 1rem;
 
             display: grid;
-            grid-template: 1fr min-content / 1fr 1fr;
+            grid-template: 1fr max-content / 1fr 1fr;
         }
 
         // &--bottom {
@@ -322,7 +324,7 @@
             grid-row: 2 / 3;
             grid-column: 1 / 2;
             
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             line-height: 2.4rem;
             letter-spacing: .1rem;
         }
@@ -367,7 +369,7 @@
             flex-direction: column;
             grid-row: 2 / 3;
             grid-column: 2 / 3;
-            justify-content: end;
+            justify-content: start;
             align-items: end;
             margin-bottom: 1rem;
             margin-right: 1rem;

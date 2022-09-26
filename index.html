@@ -25,10 +25,10 @@
    
     <div id="a" class="floating__anchor">&nbsp;</div>
 
-    <div class="video-popup">
+    <div id="video-popup" class="video-popup video-popup__hide">
         <div class="video-popup__video">
-            <div class="video-popup__playpause video-popup__playpause--play" id="videoPlayPauseButton"><span>&#x23F5;</span></div>
-            <video src="./images/portfolio/reportzone/reportzone_intro_lowres.mp4" class="video-popup__video--video" loop></video>
+            <div class="video-popup__playpause video-popup__playpause--play" id="videoPlayPauseButton"><span>&#x23EF;</span></div>
+            <video id="fullScreenVideo" src="/images/portfolio/" class="video-popup__video--video" loop></video>
         </div>
     </div>
 
@@ -62,9 +62,9 @@
         <div class="aboutme__content">
 
             <div class="aboutme__spiel">
-                <p>Hi, I am Alex Bunting and I am a freelance webdesigner specialising in websites for small businesses and individuals.</p>
+                <p>Im Alex Bunting, a Web Developer specialising in Single Page applications using the Angular Framework supported by a NodeJS backend.</p>
             </div>
-            <div class="aboutme__skills">
+            <!-- <div class="aboutme__skills">
                 <div class="aboutme__qualification">
                     <div class="aboutme__qualification--image">
                         <img src="./images/HTML_Logo2.svg" alt="HTML5 Logo" class="aboutme__qualification--image--src">
@@ -100,12 +100,19 @@
                     <div class="aboutme__qualification--skill">Node</div>
                     <div class="aboutme__qualification--detail">Javascript runtime environment outside of a web browser.</div>
                 </div>
-                
+            </div> -->
+
+            <div class="aboutme__skills-new">
+                <div class="aboutme__skills-new--image"><img src="./images/Angular_trimmed.svg" alt="Angular Logo"></div>
+                <div class="aboutme__skills-new--image"><img src="./images/Typescript_logo_2020.svg" alt="Typescript Logo"></div>
+                <div class="aboutme__skills-new--image"><img src="./images/CSS3_logo_and_wordmark.svg" alt="CSS Logo"></div>
+                <div class="aboutme__skills-new--image"><img src="./images/HTML_Logo2.svg" alt="HTML5 Logo"></div>
+                <div class="aboutme__skills-new--image aboutme__skills-new--longimage"><img src="./images/node.svg" alt="NodeJS Logo"></div>
             </div>
         </div>
     </section>
     
-    <h1 class="header-section mb-hg">Portfolio New</h1>
+    <h1 class="header-section mb-sm">Portfolio New</h1>
     
     <section id="portfolio" class="portfolio scrollFadeEffect">
 
@@ -139,6 +146,7 @@
                     <div class="portfolio__site--links">
                         <div class="portfolio__site--link"><a href="https://github.com/Bogomip/reports">GitHub</a></div>
                         <div class="portfolio__site--link"><a href="https://www.reports.zone/">Live</a></div>
+                        <div class="portfolio__site--link playVideoLink" data-link="/reportzone/reportzone_intro_lowres.mp4">Play Video</div>
                     </div>
 
                 </div>
@@ -179,6 +187,7 @@
                         <div class="portfolio__site--link"><a href="https://github.com/Bogomip/wordle-leagues">GitHub (Front)</a></div>
                         <div class="portfolio__site--link"><a href="https://github.com/Bogomip/wordle-leagues-backend">GitHub (Back)</a></div>
                         <div class="portfolio__site--link"><a href="https://www.wordleleague.org/">Live</a></div>
+                        <div class="portfolio__site--link playVideoLink" data-link="/wordleleague/WordleLeague.mp4">Play Video</div>
                     </div>
 
                 </div>
@@ -218,6 +227,7 @@
                     <div class="portfolio__site--links">
                         <div class="portfolio__site--link"><a href="https://github.com/Bogomip/rednova/tree/main/rednova">GitHub</a></div>
                         <div class="portfolio__site--link">Live coming soon!</div>
+                        <div class="portfolio__site--link playVideoLink" data-link="/rednova/Rednova (remake) Small.mp4">Play Video</div>
                     </div>
 
                 </div>
@@ -250,6 +260,7 @@
                 <div class="portfolio__minor--links">
                     <div class="portfolio__minor--link"><a href="https://github.com/Bogomip/physics-project">GitHub</a></div>
                     <div class="portfolio__minor--link"><a href="https://physics.sweeto.co.uk/#/">Live</a></div>
+                    <div class="portfolio__minor--link playVideoLink" data-link="/physics/physicsvideo.mp4">Play Video</div>
                 </div>
 
             </div>
@@ -277,6 +288,7 @@
 
                 <div class="portfolio__minor--links">
                     <div class="portfolio__minor--link"><a href="https://apollo.sweeto.co.uk/">Live</a></div>
+                    <div class="portfolio__minor--link playVideoLink" data-link="/apollo/Apollo 0.95(1).mp4">Play Video</div>
                 </div>
 
             </div>
@@ -285,53 +297,6 @@
 
     </section>
       
-    <!-- <h1 class="header-section mb-hg">Portfolio</h1>   -->
-
-    <!-- <section id="portfolio" class="portfolio scrollFadeEffect">
-
-        <div class="portfolio__container">
-
-            <div class="portfolio__item portfolio__item--1">
-                <div class="portfolio__content">
-                    <div class="portfolio__text">Reports</div>
-                    <a href="#info" onclick="loadPortfolioPiece('reports')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio__item portfolio__item--1">
-                <div class="portfolio__content">
-                    <div class="portfolio__text">!This>#Phys</div>
-                    <a href="#info" onclick="loadPortfolioPiece('physics')">
-                        <video src="./images/portfolio/apollo_bckgrnd_demo.mp4" class="portfolio__video" loop></video>
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio__item portfolio__item--1">
-                <div class="portfolio__content">
-                    <div class="portfolio__text">Cartel</div>
-                    <a href="#info" onclick="loadPortfolioPiece('cartel')">
-                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
-                    </a>
-                </div>
-            </div>
-            <div class="portfolio__item portfolio__item--1">
-                <div class="portfolio__content">
-                    <div class="portfolio__text">Apollo</div>
-                    <a href="#info" onclick="loadPortfolioPiece('apollo')">
-                        <video src="./images/portfolio/apollo-optimised.mp4" class="portfolio__video" loop muted></video>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        
-    </section> -->
-<!-- 
-    <div id="info" class="info">
-        <a href="#a" class="info__close">&cross;</a>
-        <div id="info__file"></div>
-    </div> -->
 <!--       
     <h1 class="header-section mt-hg">Blog</h1>  
     
@@ -409,57 +374,6 @@
            
 
         </div>
-
-    </section> -->
-<!--     
-    <h1 class="header-section mt-hg">Rates and Packages</h1>  
-    
-    <section id="rates" class="rates scrollFadeEffect">
-
-        <p>So you can have a better idea of what the costs may be in your decision to get a new website, its beneficial to know the costs associated so you can make the best decisions. I try to be as upfront as I can about costs, so you can make the best decision for you. Find my table of costs lised below for typical websites (i.e. costs might change if you need more).</p>
-
-        <table class="rates__table">
-            <thead>
-                <tr>
-                    <th>Package</th>
-                    <th colspan="2">Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="rates__name">Personalised Template Website</div>
-                        <div class="rates__description">This website can be selected from one of my growing number of designs in my templates.</div>
-                        <div class="rates__example">Example 1</div>
-                    </td>
-                    <td class="rates__cost">100 GBP</td>
-                    <td rowspan="4" class="rates__support">
-                        <div class="rates__name">Support</div>
-                        <div class="rates__description">All websites include one yearly content update for the first two years. All websites are also designed to be fully responsive, meaning you can rest assured it will look good from mobile to larger desktop computers.</div>
-                        <div class="rates__name">Support</div>
-                        <div class="rates__description">I also offer packages for hosting your website, either through an yourwebsite.alexbunting.com address or on your own web location.</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="rates__name">Fully Personalised Website</div>
-                        <div class="rates__description">This website is handcrafted especially for you - with your ideas and your personality built in.</div>
-                        <div class="rates__example">Example 1</div>
-                    </td>
-                    <td class="rates__cost">150 GBP</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="rates__name">Small Business Website</div>
-                        <div class="rates__description">For small businesses I can provide you with a range of different options - these can be single page websites advertising your product with contact information, or as deep as a fully features online shop, with a card, ording options, and a back-end for you to update the site with new products.</div>
-                        <div class="rates__example">Example 1</div>
-                    </td>
-                    <td class="rates__cost">150 GBP</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <p>I have a range of different options, and so to help you make a decision I have made a quote generator which will give you an approximate value as soon as you tell it things!.</p>
 
     </section> -->
       
