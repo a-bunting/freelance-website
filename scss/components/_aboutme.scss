@@ -18,6 +18,12 @@
             box-shadow: 0 1rem 2rem rgba(black, .3);
             filter: brightness(1.2);
         }
+
+        // mobile portrait
+        @media screen and (orientation: portrait) and (max-width: 600px) {
+            display: none;
+            width: 0;
+        }
     }
     
     &__picture {
@@ -67,7 +73,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
-        
+
         & > * {
             padding: 4rem;
             transition: all .2s;
@@ -83,11 +89,23 @@
         }
 
         &--image {
-            img { height: 10rem; }
+            img { 
+                height: 10rem;
+                
+                @media screen and (orientation: portrait) and (max-width: 600px) {
+                    height: 7rem;
+                } 
+            }
         }
 
         &--longimage {
-            img { height: 8rem; }
+            img { 
+                height: 8rem;
+                
+                @media screen and (orientation: portrait) and (max-width: 600px) {
+                    height: 6rem;
+                } 
+            }
         }
     }
 

@@ -8,6 +8,9 @@ document.getElementById("videoPlayPauseButton").addEventListener("click", toggle
  * If they are, stop it attempting to load (as it wont have context for what to load)
  */
 function domLoaded(): void {
+    console.log(`ere`);
+    document.getElementById("submit").addEventListener("click", sendEmail, false);
+    
     if(location.hash) {
         location.hash = 'a';
     }
@@ -60,4 +63,24 @@ function togglePlayVideo(): void {
     } else {
         document.getElementById("togglePlayVideo").classList.remove("video-popup__playpause--corner");
     }
+}
+
+function sendEmail(): void {
+    // const Http: XMLHttpRequest = new XMLHttpRequest();
+    // const url: string = 'https://api.emailjs.com/api/v1.0/email/send';
+
+    const data: { name: string, email: string, message: string } = {
+        name: (document.getElementById("name") as HTMLInputElement).value, 
+        email: (document.getElementById("email") as HTMLInputElement).value, 
+        message: (document.getElementById("message") as HTMLInputElement).value
+    }
+
+    console.log(data);
+
+    // Http.open("POST", url);
+    // Http.send(data);
+
+    // Http.onreadystatechange = (error: any) => {
+    //     console.log(Http.responseText);
+    // }
 }

@@ -40,6 +40,21 @@
                     <div class="header__forename">Alex</div>
                     <div class="header__surname">Bunting</div>
                 </div>
+                <div class="header__title header__title--fadeIn header__title--basic" id="header__title">
+                    <div class="header__title--0">W</div>
+                    <div class="header__title--1">e</div>
+                    <div class="header__title--2">b</div>
+                    <div class="header__title--3"></div>
+                    <div class="header__title--4">D</div>
+                    <div class="header__title--5">e</div>
+                    <div class="header__title--6">v</div>
+                    <div class="header__title--7">e</div>
+                    <div class="header__title--8">l</div>
+                    <div class="header__title--9">o</div>
+                    <div class="header__title--10">p</div>
+                    <div class="header__title--11">e</div>
+                    <div class="header__title--12">r</div>
+                </div>
             </div>
             
 
@@ -64,57 +79,21 @@
             <div class="aboutme__spiel">
                 <p>Im Alex Bunting, a Web Developer specialising in Single Page applications using the Angular Framework supported by a NodeJS backend.</p>
             </div>
-            <!-- <div class="aboutme__skills">
-                <div class="aboutme__qualification">
-                    <div class="aboutme__qualification--image">
-                        <img src="./images/HTML_Logo2.svg" alt="HTML5 Logo" class="aboutme__qualification--image--src">
-                    </div>
-                    <div class="aboutme__qualification--skill">HTML5</div>
-                    <div class="aboutme__qualification--detail">Modern markup which search engines can interpret</div>
-                </div>
-                <div class="aboutme__qualification">
-                    <div class="aboutme__qualification--image">
-                        <img src="./images/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="aboutme__qualification--image--src">
-                    </div>
-                    <div class="aboutme__qualification--skill">CSS (SCSS)</div>
-                    <div class="aboutme__qualification--detail">Adaptive styling for mobile, laptop, desktop or printer</div>
-                </div>
-                <div class="aboutme__qualification">
-                    <div class="aboutme__qualification--image">
-                        <img src="./images/Typescript_logo_2020.svg" alt="Typescript Logo" class="aboutme__qualification--image--src">
-                    </div>
-                    <div class="aboutme__qualification--skill">Typescript</div>
-                    <div class="aboutme__qualification--detail">Bug lite Javascript for dynamic website content</div>
-                </div>
-                <div class="aboutme__qualification">
-                    <div class="aboutme__qualification--image">
-                        <img src="./images/Angular_trimmed.svg" alt="Angular Logo" class="aboutme__qualification--image--src">
-                    </div>
-                    <div class="aboutme__qualification--skill">Angular2</div>
-                    <div class="aboutme__qualification--detail">Highly interactive user experiences for more sophisticated wbesites</div>
-                </div>
-                <div class="aboutme__qualification">
-                    <div class="aboutme__qualification--image">
-                        <img src="./images/node.svg" alt="NodeJS Logo" class="aboutme__qualification--image--src">
-                    </div>
-                    <div class="aboutme__qualification--skill">Node</div>
-                    <div class="aboutme__qualification--detail">Javascript runtime environment outside of a web browser.</div>
-                </div>
-            </div> -->
 
             <div class="aboutme__skills-new">
                 <div class="aboutme__skills-new--image"><img src="./images/Angular_trimmed.svg" alt="Angular Logo"></div>
                 <div class="aboutme__skills-new--image"><img src="./images/Typescript_logo_2020.svg" alt="Typescript Logo"></div>
                 <div class="aboutme__skills-new--image"><img src="./images/CSS3_logo_and_wordmark.svg" alt="CSS Logo"></div>
                 <div class="aboutme__skills-new--image"><img src="./images/HTML_Logo2.svg" alt="HTML5 Logo"></div>
-                <div class="aboutme__skills-new--image aboutme__skills-new--longimage"><img src="./images/node.svg" alt="NodeJS Logo"></div>
+                <div class="aboutme__skills-new--image aboutme__skills-new--longimage"><img src="./images/nodejs.png" alt="NodeJS Logo"></div>
             </div>
         </div>
     </section>
     
-    <h1 class="header-section mb-sm">Portfolio New</h1>
     
     <section id="portfolio" class="portfolio scrollFadeEffect">
+        
+        <h1 class="header-section mt-lg mb-lg">Portfolio</h1>
 
         <div class="portfolio__projects--major">
             
@@ -147,7 +126,7 @@
     
                         <div class="portfolio__site--links">
                             <div class="portfolio__site--link"><a href="https://github.com/Bogomip/reports">GitHub</a></div>
-                            <div class="portfolio__site--link"><a href="https://www.reports.zone/">Live</a></div>
+                            <div class="portfolio__site--link"><a href="https://reportszone.sweeto.co.uk">Live</a></div>
                             <div class="portfolio__site--link playVideoLink" data-link="/reportzone/reportzone_intro_lowres.mp4">Play Video</div>
                         </div>
     
@@ -181,7 +160,7 @@
                                 <img src="/images/Angular_trimmed.svg" alt="Angular">
                             </div>
                             <div class="portfolio__site--skills--long">
-                                <img src="/images/node.svg" alt="NodeJS">
+                                <img src="/images/nodejs.png" alt="NodeJS">
                             </div>
                         </div>
     
@@ -222,7 +201,7 @@
                                 <img src="/images/Angular_trimmed.svg" alt="Angular">
                             </div>
                             <div class="portfolio__site--skills--long">
-                                <img src="/images/node.svg" alt="NodeJS">
+                                <img src="/images/nodejs.png" alt="NodeJS">
                             </div>
                         </div>
     
@@ -237,6 +216,8 @@
             </div>
         </div>
     
+        <h1 class="header-section mt-lg mb-lg">Other Projects</h1>
+
         <div class="portfolio__projects--minor">
             <div class="portfolio__site--minor" id="portfolio3">
                 <div class="portfolio__site--background">
@@ -396,15 +377,16 @@
             <div class="contact__field-input">
                 <textarea name="message" id="message" class="contact__input contact__textarea-input"></textarea>
             </div>
-            <div class="contact__submit-button">
+            <div class="contact__submit-button" id="submit">
                 Send Message
             </div>
         </div>
 
+        
         <div class="footer">
-            <p>Website created by Alex Bunting. If you want to know more about me or my work, please use the form to the left to contact me.</p>
+            <div id="contact__send" class="contact__send"></div>
+            <p>Website created by Alex Bunting. If you want to know more about me or my work, please use the form to contact me.</p>
             <p>This website does not collect or store any data about you. Emailing me stores your email and name (and any other info you provide in your message) in my email only.</p>
-            
         </div>
 
    </footer>
