@@ -14,6 +14,15 @@ function domLoaded(): void {
     if(location.hash) {
         location.hash = 'a';
     }
+   
+    fetch('https://api.github.com/users/Bogomip/contributions')
+    .then(data => {
+        console.log(`1and here`, data)
+    })
+    .catch(error => {
+        console.error(`nooo`, error)
+    }); 
+
 }
 
 /**

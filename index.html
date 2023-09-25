@@ -65,6 +65,9 @@
         <a href="#aboutme" class="menu__item">Alex</a>
         <a href="#portfolio" class="menu__item">Portfolio</a>
         <a href="#contact" class="menu__item">Contact</a>
+        <div class="break--5"></div>
+        <a href="https://www.linkedin.com/in/alex-bunting-8a633a220" class="menu__item" target="_blank"><img src="./images/LI-In-Bug.png" alt="LinkedIn Logo"></a>
+        <a href="https://github.com/Bogomip" class="menu__item" target="_blank"><img src="./images/Git-Icon-1788C.png" alt="GIT"></a>
     </nav>
 
    <main>
@@ -72,12 +75,17 @@
     <section id="aboutme" class="aboutme scrollFadeEffect">
 
         <div class="aboutme__image">
-            <img src="./images/alex-big.jpg" alt="Alex Bunting" class="aboutme__picture">
+            <img src="./images/alex-fancy-cropped.jpg" alt="Alex Bunting" class="aboutme__picture">
         </div>
         <div class="aboutme__content">
 
             <div class="aboutme__spiel">
-                <p>Im Alex Bunting, a Web Developer specialising in Single Page applications using the Angular Framework supported by a NodeJS backend.</p>
+                <p>Im Alex Bunting, a Full Stack Web Developer with a focus on creating dynamic and interactive websites using the Angular Framework supported by a NodeJS backend.</p>
+            </div>
+            
+            <div class="aboutme__github">
+                <div class="aboutme__github--graph"><img src="./images/github-sept2023.JPG" alt="GitHub Contributions Graph Sept 2023"></div>
+                <div class="aboutme__github--desc"><p><a href="https://github.com/Bogomip" target="_blank">Click here</a> to view my GitHub profile, where you can view all of my public projects.</p></div>
             </div>
 
             <div class="aboutme__skills-new">
@@ -167,7 +175,7 @@
                         <div class="portfolio__site--links">
                             <div class="portfolio__site--link"><a href="https://github.com/Bogomip/wordle-leagues">GitHub (Front)</a></div>
                             <div class="portfolio__site--link"><a href="https://github.com/Bogomip/wordle-leagues-backend">GitHub (Back)</a></div>
-                            <div class="portfolio__site--link"><a href="https://www.wordleleague.org/">Live</a></div>
+                            <div class="portfolio__site--link"><a href="https://wordleleague.sweeto.co.uk/">Live</a></div>
                             <div class="portfolio__site--link playVideoLink" data-link="/wordleleague/WordleLeague.mp4">Play Video</div>
                         </div>
     
@@ -206,8 +214,8 @@
                         </div>
     
                         <div class="portfolio__site--links">
-                            <div class="portfolio__site--link"><a href="https://github.com/Bogomip/rednova/tree/main/rednova">GitHub</a></div>
-                            <div class="portfolio__site--link">Live coming soon!</div>
+                            <div class="portfolio__site--link"><a href="https://github.com/Bogomip/rednova">GitHub</a></div>
+                            <div class="portfolio__site--link"><a href="https://rednova.sweeto.co.uk/">Live</a></div>
                             <div class="portfolio__site--link playVideoLink" data-link="/rednova/Rednova (remake) Small.mp4">Play Video</div>
                         </div>
     
@@ -278,85 +286,7 @@
 
     </section>
       
-<!--       
-    <h1 class="header-section mt-hg">Blog</h1>  
-    
-    <section id="blog" class="rates scrollFadeEffect">
 
-        <p>I keep a blog to help my development process. Click here to see the complete archive or see some of the more recent posts below.</p>
-        
-        <div class="blog__posts">
-
-            <input type="radio" class="blog__post--radio" name="blog__post--selector" id="blog__post--0" checked>
-            <div class="blog__post--description">
-
-                <div class="blog__post--text">
-                    Back in the mid nauties I played a lot of text based browser games, and to this day still dip in every so often. One of my favourites at the time was Redlite Distrikt, and after a decade of thought, I think its time I made my own iteration.
-                </div>
-                <div class="blog__post--image">
-                    <img src="/images/BLOG/bp1-cartel.JPG" alt="Cartels, the start of something old" class="blog__post--picture">
-                </div>
-                <div class="blog__post--tags">
-                    <div class="blog__post--tag">Angular</div>
-                    <div class="blog__post--tag">CSS</div>
-                    <div class="blog__post--tag">Firebase</div>
-                </div>
-
-            </div>
-            <label for="blog__post--0" class="blog__post--name">A remix of a classic game. An intro to Cartels.</label>
-
-            <input type="radio" class="blog__post--radio" name="blog__post--selector" id="blog__post--1">
-            <div class="blog__post--description">
-                <div class="blog__post--text">
-                    Back in the mid nauties I played a lot of text based browser games, and to this day still dip in every so often. One of my favourites at the time was Redlite Distrikt, and after a decade of thought, I think its time I made my own iteration.
-                </div>
-                <div class="blog__post--image">
-                    <img src="/images/BLOG/bp1-cartel.JPG" alt="Cartels, the start of something old" class="blog__post--picture">
-                </div>
-                <div class="blog__post--tags">
-                    <div class="blog__post--tag">Angular</div>
-                    <div class="blog__post--tag">CSS</div>
-                    <div class="blog__post--tag">Firebase</div>
-                </div>
-            </div>
-            <label for="blog__post--1" class="blog__post--name">This is the name of the blog 222222</label>
-
-            <input type="radio" class="blog__post--radio" name="blog__post--selector" id="blog__post--2">
-            <div class="blog__post--description">
-                <div class="blog__post--text">
-                    Personalised
-                </div>
-                <div class="blog__post--image">
-                    <img src="/images/BLOG/bp1-cartel.JPG" alt="Cartels, the start of something old" class="blog__post--picture">
-                </div>
-                <div class="blog__post--tags">
-                    <div class="blog__post--tag">Angular</div>
-                    <div class="blog__post--tag">CSS</div>
-                    <div class="blog__post--tag">Firebase</div>
-                </div>            
-            </div>
-            <label for="blog__post--2" class="blog__post--name">This is the name of the blog 333333</label>
-
-            <input type="radio" class="blog__post--radio" name="blog__post--selector" id="blog__post--3">
-            <div class="blog__post--description">
-                <div class="blog__post--text">
-                    Personalised
-                </div>
-                <div class="blog__post--image">
-                    <img src="/images/BLOG/bp1-cartel.JPG" alt="Cartels, the start of something old" class="blog__post--picture">
-                </div>
-                <div class="blog__post--tags">
-                    <div class="blog__post--tag">Angular</div>
-                    <div class="blog__post--tag">CSS</div>
-                    <div class="blog__post--tag">Firebase</div>
-                </div>            
-            </div>
-            <label for="blog__post--3" class="blog__post--name">This is the name of the blog 444444</label>
-           
-
-        </div>
-
-    </section> -->
       
    </main>
    
@@ -365,17 +295,17 @@
        <!-- <div id="contact" class="contact scrollFadeEffect"> -->
        <div id="contact" class="contact">
            <div class="contact__text">Contact Me</div>
-           <div class="contact__field-name">Name</div>
+           <!-- <div class="contact__field-name">Name</div> -->
            <div class="contact__field-input">
-               <input type="text" name="name" id="name" class="contact__input contact__text-input">
+               <input type="text" name="name" id="name" class="contact__input contact__text-input" placeholder="Name">
             </div>
-            <div class="contact__field-name">Email</div>
+            <!-- <div class="contact__field-name">Email</div> -->
             <div class="contact__field-input">
-                <input type="email" name="email" id="email" class="contact__input contact__text-input">
+                <input type="email" name="email" id="email" class="contact__input contact__text-input" placeholder="Email Address">
             </div>
-            <div class="contact__field-name">Message</div>
+            <!-- <div class="contact__field-name">Message</div> -->
             <div class="contact__field-input">
-                <textarea name="message" id="message" class="contact__input contact__textarea-input"></textarea>
+                <textarea name="message" id="message" class="contact__input contact__textarea-input" placeholder="Your Message"></textarea>
             </div>
             <div class="contact__submit-button" id="submit">
                 Send Message

@@ -1,12 +1,22 @@
-$color-primary-lightest: #F0D4BF;
-$color-primary-light: #F1D11C;
-$color-primary-main: #E59E10;
-$color-primary-dark: #E66C0E;
-$color-secondary-light: #2F290B;
-$color-secondary: #2F290B;
-$color-secondary-dark: #2F290B;
+// $color-primary-lightest: #F0D4BF;
+// $color-primary-light: #F1D11C;
+// $color-primary-main: #E59E10;
+// $color-primary-dark: #E66C0E;
+// $color-secondary-light: #2F290B;
+// $color-secondary: #2F290B;
+// $color-secondary-dark: #2F290B;
 
-$color-juxtapose: #0ba0a0;
+// $color-juxtapose: #0ba0a0;
+$color-primary-lightest: #3b444b;
+$color-primary-light: #353839;
+$color-primary-main: #0e1111;
+$color-primary-dark: #0e1111;
+
+$color-secondary-light: #e3ae57;
+$color-secondary: white;
+$color-secondary-dark: #e3ae57;
+
+$color-juxtapose: #dc3d24;
 
 $color-white: #fff;
 $color-black: #0A213B;
@@ -21,6 +31,8 @@ $color-black: #0A213B;
 .mt-md { margin-top: 3rem; }
 .mt-lg { margin-top: 5rem; }
 .mt-hg { margin-top: 8rem; }
+
+.break { &--5 { width: 15rem; } }
 
 .header-section {
     text-align: center;

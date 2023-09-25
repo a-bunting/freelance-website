@@ -22,6 +22,26 @@ function domLoaded() {
     }
 
     launchWebDeveloperAnimations();
+
+    fetch('https://github.com/users/Bogomip/contributions')
+    .then(data => {
+        console.log(data);
+    })
+    .catch(e => { console.log(`error`, e); })
+
+    // fetch('https://api.github.com/graphql', {
+    //     method: 'POST', 
+    //     headers: { "Content-Type": "application/json" }, 
+    //     body: JSON.stringify({
+    //         query: `{}`
+    //     })
+    // })
+    // .then(data => {
+    //     console.log(`1and here`, data)
+    // })
+    // .catch(error => {
+    //     console.error(`nooo`, error)
+    // });
     
 }
 /**

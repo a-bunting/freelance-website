@@ -10,7 +10,7 @@
         position: relative;
         box-sizing: content-box;
         flex: 0 0 20vw;
-        align-self: flex-start;
+        align-self: center;
         
         &:hover .aboutme__picture {
             border: 3rem solid rgba($color-primary-main, .8);
@@ -40,7 +40,7 @@
 
     &__spiel {
         padding: 0 4rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.8;
         letter-spacing: .3rem;
 
@@ -64,6 +64,35 @@
         &:hover > * {
             filter: grayscale(1);
         }
+    }
+
+    &__github {
+        display: flex;
+        align-items: center;
+        padding: 4rem 4rem 0 4rem;
+
+        &--graph {
+            flex: 1;
+
+            img { 
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+            } 
+        }
+
+        &--desc {
+            flex-basis: 30rem;
+            
+            p {
+                font-size: 1.8rem;
+                line-height: 1.8;
+                letter-spacing: .3rem;
+                padding: 1rem 2rem;
+            }
+        }
+
+
     }
 
     &__skills-new {
@@ -90,66 +119,18 @@
 
         &--image {
             img { 
-                height: 10rem;
+                height: 8rem;
                 
-                @media screen and (orientation: portrait) and (max-width: 600px) {
-                    height: 7rem;
-                } 
+                @media screen and (orientation: portrait) and (max-width: 600px) { height: 5rem; } 
             }
         }
 
         &--longimage {
             img { 
-                height: 8rem;
+                height: 7rem;
                 
-                @media screen and (orientation: portrait) and (max-width: 600px) {
-                    height: 6rem;
-                } 
+                @media screen and (orientation: portrait) and (max-width: 600px) { height: 4rem; } 
             }
         }
     }
-
-    // &__qualification {
-
-    //     display: grid;
-    //     position: relative;
-    //     grid-template-columns: 6rem 1fr;
-    //     align-items: center;
-
-    //     background-color: rgba($color-secondary-light, .1);
-    //     box-shadow: 0 1rem 2rem rgba(black, .3);
-    //     padding: 2rem 4rem;
-    //     transition: all .2s;
-
-    //     &--image {
-    //         grid-row: 1 / span 2;
-
-    //         &--src {
-    //             width: 6rem;
-    //             transform: translateX(-2.5rem);
-    //         }
-    //     }
-
-    //     &--skill {
-    //         font-size: 2.0rem;
-    //         font-weight: 700;
-    //         color: $color-primary-dark;
-    //         text-transform: uppercase;
-    //         margin-bottom: 1rem;
-    //     }
-
-    //     &--detail {
-    //         font-size: 1.6rem;
-    //         font-style: italic;
-    //         hyphens: auto;
-    //     }
-        
-    //     &:hover {
-    //         transform: translateY(-.3rem) scale(1.05);
-    //         z-index: 10;
-    //         box-shadow: 0 2rem 4rem rgba(black, .3);
-    //         filter: grayscale(0);
-    //     }
-    // }
-
 }
