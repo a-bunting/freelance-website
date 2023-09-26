@@ -17,6 +17,7 @@
 
         &--minor {
             display: flex;
+            flex-wrap: wrap;
         }
 
         &--major, &--minor {
@@ -73,11 +74,8 @@
             margin-right: 2.5rem;
             width: 10rem;
             text-align: center;
-            
-            a, a:active, a:visited {
-                color: white;
-                text-decoration: none;
-            }
+            color: white;
+            text-decoration: none;
 
             &:hover {
                 cursor: pointer;
@@ -86,7 +84,7 @@
                 background-color: rgba(white, .3);
             }
 
-            &:not(:last-of-type) { margin-bottom: .5rem; }
+            &:not(:last-child) { margin-bottom: .5rem; }
         }
 
         &--description {
@@ -216,13 +214,16 @@
         &--minor {
             position: relative;
             flex: 1;
+            min-width: 45vw;
             border-radius: 1rem;
             min-height: 15rem;
             max-height: 17rem;
             box-shadow: .3rem 0 .6rem rgba(black, .5);
             overflow: hidden;
 
-            &:not(:last-of-type) { margin-right: 1rem;}
+            margin-bottom: 1rem;
+
+            &:nth-of-type(2n) { margin-left: 1rem;}
 
             &:hover {
                 .portfolio__minor--info {
@@ -254,7 +255,7 @@
 
             @media screen and (orientation: portrait) and (max-width: 600px) {
                 margin-bottom: 2rem;
-                &:not(:last-of-type) { margin-right: 0rem; }
+                &:nth-of-type(2n) { margin-left: 0rem; }
             }
         }
 
@@ -305,6 +306,14 @@
                 text-shadow: .2rem 0 .4rem white;
                 font-weight: bold;
                 font-size: 4rem;
+            }
+            
+            &--ags {
+                color: black;
+                text-shadow: .2rem 0 .4rem white;
+                font-weight: bold;
+                font-size: 4rem;
+                width: 100%;
             }
         }
 
@@ -445,10 +454,10 @@
             margin-right: 0rem;
             width: 16rem;
             text-align: center;
+            color: black;
+            text-decoration: none;
 
             a, a:active, a:visited {
-                color: black;
-                text-decoration: none;
             }
 
             &:hover {
@@ -458,7 +467,7 @@
                 background-color: rgba(white, .3);
             }
 
-            &:not(:last-of-type) { margin-bottom: .5rem; }
+            &:not(:last-child) { margin-bottom: .5rem; }
 
             // @media screen and (max-width: 1000px) {
             //     &:not(:last-of-type) { margin-right: .5rem; }

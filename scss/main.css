@@ -515,16 +515,13 @@ footer {
 
 .contact {
   position: relative;
-  font-size: 1.6rem;
-}
-.contact__form {
-  position: relative;
   justify-self: flex-end;
+  font-size: 1.6rem;
   width: 40rem;
   margin-bottom: 1rem;
 }
 @media screen and (orientation: portrait) and (max-width: 600px) {
-  .contact__form {
+  .contact {
     margin: 0 auto;
   }
 }
@@ -532,13 +529,9 @@ footer {
   animation: fadeIn 1s ease-in-out 0s 1 forwards;
   margin-bottom: 1rem;
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   opacity: 1;
-  transition: all 0.2s;
-  width: 100%;
-  background-color: #dc3d24;
-  border-radius: 1rem;
-  text-align: center;
+  text-shadow: 0.1rem 0 0.2rem white;
 }
 .contact__text {
   padding: 1rem 0;
@@ -584,43 +577,7 @@ footer {
   background-color: #0e1111;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.6);
 }
-.contact__sent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0rem;
-  max-height: 0.2rem;
-  transform: translate(-50%, -50%);
-  border-radius: 1rem;
-  background-color: #dc3d24;
-  text-align: center;
-  padding: 0 0;
-  animation: openBoxWidth 0.3s ease-in-out 0s 1 forwards, openBoxHeight 0.2s ease-in-out 0.35s 1 forwards;
-  font-size: 1.8rem;
-}
-.contact__sent p {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out 0.5s 1 forwards;
-}
 
-@keyframes openBoxWidth {
-  0% {
-    width: 0rem;
-  }
-  100% {
-    width: 20rem;
-  }
-}
-@keyframes openBoxHeight {
-  0% {
-    max-height: 0.2rem;
-    padding: 0 0;
-  }
-  100% {
-    max-height: 8rem;
-    padding: 1rem 2rem;
-  }
-}
 .spinner {
   position: absolute;
   top: 0;
@@ -637,8 +594,7 @@ footer {
   content: ". . .";
   width: 4rem;
   height: 4rem;
-  background-color: #dc3d24;
-  border: 0.2rem solid white;
+  background-color: greenyellow;
   border-radius: 1rem;
   animation: spins 0.5s ease-in-out 0s infinite alternate;
   display: flex;
@@ -1102,7 +1058,6 @@ header {
 }
 .portfolio__projects--minor {
   display: flex;
-  flex-wrap: wrap;
 }
 @media screen and (orientation: portrait) and (max-width: 600px) {
   .portfolio__projects--major, .portfolio__projects--minor {
@@ -1153,6 +1108,8 @@ header {
   margin-right: 2.5rem;
   width: 10rem;
   text-align: center;
+}
+.portfolio__minor--link a, .portfolio__minor--link a:active, .portfolio__minor--link a:visited {
   color: white;
   text-decoration: none;
 }
@@ -1162,7 +1119,7 @@ header {
   box-shadow: 0.4rem 0 0.8rem rgba(0, 0, 0, 0.7);
   background-color: rgba(255, 255, 255, 0.3);
 }
-.portfolio__minor--link:not(:last-child) {
+.portfolio__minor--link:not(:last-of-type) {
   margin-bottom: 0.5rem;
 }
 .portfolio__minor--description {
@@ -1290,16 +1247,14 @@ header {
 .portfolio__site--minor {
   position: relative;
   flex: 1;
-  min-width: 45vw;
   border-radius: 1rem;
   min-height: 15rem;
   max-height: 17rem;
   box-shadow: 0.3rem 0 0.6rem rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  margin-bottom: 1rem;
 }
-.portfolio__site--minor:nth-of-type(2n) {
-  margin-left: 1rem;
+.portfolio__site--minor:not(:last-of-type) {
+  margin-right: 1rem;
 }
 .portfolio__site--minor:hover .portfolio__minor--info {
   opacity: 1;
@@ -1332,8 +1287,8 @@ header {
   .portfolio__site--minor {
     margin-bottom: 2rem;
   }
-  .portfolio__site--minor:nth-of-type(2n) {
-    margin-left: 0rem;
+  .portfolio__site--minor:not(:last-of-type) {
+    margin-right: 0rem;
   }
 }
 .portfolio__site--background {
@@ -1400,13 +1355,6 @@ header {
   text-shadow: 0.2rem 0 0.4rem white;
   font-weight: bold;
   font-size: 4rem;
-}
-.portfolio__site--name--ags {
-  color: black;
-  text-shadow: 0.2rem 0 0.4rem white;
-  font-weight: bold;
-  font-size: 4rem;
-  width: 100%;
 }
 .portfolio__site--hover {
   position: absolute;
@@ -1497,6 +1445,8 @@ header {
   margin-right: 0rem;
   width: 16rem;
   text-align: center;
+}
+.portfolio__site--link a, .portfolio__site--link a:active, .portfolio__site--link a:visited {
   color: black;
   text-decoration: none;
 }
@@ -1506,7 +1456,7 @@ header {
   box-shadow: 0.4rem 0 0.8rem rgba(0, 0, 0, 0.7);
   background-color: rgba(255, 255, 255, 0.3);
 }
-.portfolio__site--link:not(:last-child) {
+.portfolio__site--link:not(:last-of-type) {
   margin-bottom: 0.5rem;
 }
 .portfolio__site:hover .portfolio__site--hover {
@@ -1658,4 +1608,4 @@ header {
   height: 5rem;
   width: 5rem;
   font-size: 5rem;
-}
+}/*# sourceMappingURL=main.css.map */
