@@ -162,6 +162,7 @@ function sendEmail() {
 
     // add a loader to the send thing...
     const spinner = document.createElement('div');
+    spinner.setAttribute('id', 'spinner');
     spinner.classList.add('spinner');
     document.getElementById("contact").appendChild(spinner);
 
@@ -174,20 +175,33 @@ function sendEmail() {
     .send(data.service_id, data.template_id, data.template_params, data.user_id)
     .then(response => {
         if(response.status === 200) {
-            const message = "Your message has been successfully sent. I will try to get back to you as soon as is possible.";
-            document.getElementById("contact__send").innerText = message;
+            const successBox = document.createElement('div');
+            successBox.classList.add('contact__sent');
+            successBox.innerHTML = "<p>Your message has been sent</p>";
+
+            document.getElementById("contact__form").appendChild(successBox);
             document.getElementById("contact").classList.add('fadeout');
+
+            setContactMessage("")
         }
     })
     .catch(error => { 
-        const message = "Your message was not sent. Please try again or email me directly at <a href='mailto:alex.bunting@gmail.com'>alex.bunting@gmail.com</a>.<br/><br/>This is the issue: " + error.error;
+        const message = "Your message was not sent. Please try again or email me directly at <a href='mailto:alex.bunting@gmail.com'>alex.bunting@gmail.com</a>.";
         setContactMessage(message);
         contactInputToggle(true);
+        document.getElementById('contact').removeChild(spinner);
     });
 }
 
 function setContactMessage(message) {
-    document.getElementById("contact__send").innerText = message;
+    const sentElement = document.getElementById("contact__send");
+    
+    if(message !== "") {
+        sentElement.style.padding = ".5rem 1rem";
+    } else {
+        sentElement.style.padding = "0";
+    }
+    sentElement.innerHTML = message;
 }
 
 // taken from https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
