@@ -22,7 +22,7 @@
         position: relative;
         background-color: $color-primary-light;
         box-shadow: .3rem 0 .6rem $color-secondary-dark;
-        padding: 2rem;
+        padding: 1rem;
         width: 100vh;
         border: .1rem solid black;
         z-index: 2000;
@@ -33,9 +33,55 @@
             object-fit: cover;
         }
 
+        @media screen and (orientation: landscape) and (max-height: 600px) {
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+
+            &--video {
+                object-fit: contain;
+            }
+        }
+
         // video {
             // box-shadow: .1rem 0 .2rem $color-secondary-dark;
         // }
+    }
+
+    &__close {
+        visibility: hidden;
+        user-select: none;
+        
+        @media screen and (orientation: landscape) and (max-height: 600px) {
+            visibility: visible;
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+
+            background-color: rgba($color-primary-light, .6);
+            box-shadow: .2rem 0 .4rem rgba(black, .5);
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            transition: all .2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &:hover {
+                cursor: pointer;
+                background-color: rgba($color-primary-light, 1);
+                box-shadow: .3rem 0 .6rem rgba(black, .8);
+                
+                & > * { filter: invert(1); }
+            }
+            
+            img {
+                transition: all .2s;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
     }
 
     &__playpause {
@@ -46,23 +92,16 @@
         border-radius: 50%;
         height: 8rem;
         width: 8rem;
-        font-size: 8rem;
         transition: all .2s;
-        padding: 2rem;
+        // padding: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all .2s;
-            transform: translate(20%, -25%);
-        }
         
+        img {
+            transition: all .2s;
+        }
+
         &:hover {
             cursor: pointer;
             background-color: rgba($color-primary-light, 1);
@@ -75,6 +114,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
         }
         
         &--pause {
@@ -84,6 +128,11 @@
             height: 5rem;
             width: 5rem;
             font-size: 5rem;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 

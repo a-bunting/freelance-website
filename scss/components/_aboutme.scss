@@ -71,6 +71,10 @@
         align-items: center;
         padding: 4rem 4rem 0 4rem;
 
+        @media screen and (max-width: 1100px) {
+            flex-direction: column-reverse;
+        }
+
         &--graph {
             flex: 1;
 
@@ -83,7 +87,11 @@
 
         &--desc {
             flex-basis: 30rem;
-            
+
+            @media screen and (max-width: 1100px) {
+                flex: 1 0;
+            }    
+
             p {
                 font-size: 1.8rem;
                 line-height: 1.8;
@@ -92,6 +100,26 @@
             }
         }
 
+
+        // mobile portrait
+        @media screen and (orientation: portrait) and (max-width: 600px) {
+            flex-direction: column;
+            padding-top: 2rem;
+
+            &--graph {
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            &--desc {
+                flex: 1 0;
+
+                p {
+                    padding: 1rem 0 1rem 0;
+                }
+            }
+        }
 
     }
 

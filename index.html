@@ -28,7 +28,12 @@
 
     <div id="video-popup" class="video-popup video-popup__hide">
         <div class="video-popup__video">
-            <div class="video-popup__playpause video-popup__playpause--play" id="videoPlayPauseButton"><span>&#x23EF;</span></div>
+            <div class="video-popup__playpause video-popup__playpause--play" id="videoPlayPauseButton">
+                <img src="./images/icons/play3.png" alt="Play Video" id="playVideoButtonImage">
+            </div>
+            <div class="video-popup__close" id="videoCloseButton">
+                <img src="./images/icons/shrink.png" alt="Close Video" id="closeVideoInPortraitButton">
+            </div>
             <video id="fullScreenVideo" src="/images/portfolio/" class="video-popup__video--video" loop></video>
         </div>
     </div>
@@ -102,7 +107,7 @@
     
     <section id="projects" class="portfolio scrollFadeEffect">
         
-        <h1 class="header-section mt-lg mb-lg">Projects</h1>
+        <h1 class="header-section mt-lg mb-lg">Major Projects</h1>
 
         <div class="portfolio__projects--major">
             
@@ -236,7 +241,7 @@
     
                 <div class="portfolio__minor--info">
                     <div class="portfolio__minor--description">
-                        !This>#Phys is primarily physics simulations which focus on data collection. It also hosts my maze and algorithm generators.
+                        !This>#Phys is primarily physics simulations which focus on data collection, but also houses some other useful learning tools. It also hosts my maze and algorithm generators.
                     </div>
                     <div class="portfolio__minor--skills">
                         <div class="portfolio__minor--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
@@ -265,7 +270,7 @@
                 
                 <div class="portfolio__minor--info">
                     <div class="portfolio__minor--description">
-                        Apollo is a transformative classroom tool to take the focus in classrooms off the teacher and back onto the learners.
+                        Apollo is a transformative classroom tool to take the focus in classrooms off the teacher and onto the learners. Created in PHP with jQuery and a MySQL database.
                     </div>
                     <div class="portfolio__minor--skills">
                         <div class="portfolio__minor--skill"><img src="/images/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
@@ -285,7 +290,7 @@
             <div class="portfolio__site--minor" id="portfolio5">
                 
                 <div class="portfolio__site--background">
-                    <video src="./images/portfolio/apollo/Apollo 0.95(1).mp4" class="portfolio__video" loop></video>
+                    <video src="./images/portfolio/ngx-mazes/mazegeneration.mp4" class="portfolio__video" loop></video>
                 </div>
                 <div class="portfolio__site--name portfolio__site--name--apollo">
                     ngx-mazes
@@ -294,7 +299,7 @@
                 
                 <div class="portfolio__minor--info">
                     <div class="portfolio__minor--description">
-                        ngx-mazes is an Angular library to aid in the creation of perfect mazes. It implements several different algorithms and has facilities for generating graphs to implement pathing algorithms.
+                        ngx-mazes is an Angular library to aid in the creation of perfect mazes. It implements several different algorithms and has the ability to generate graphs to integrate with pathing algorithms.
                     </div>
                     <div class="portfolio__minor--skills">
                         <div class="portfolio__minor--skill"><img src="/images/Angular_trimmed.svg" alt="Angular"></div>
@@ -304,7 +309,7 @@
                 <div class="portfolio__minor--links">
                     <a class="portfolio__minor--link" href="https://www.npmjs.com/package/ngx-mazes" target="_blank">npm</a>
                     <a class="portfolio__minor--link" href="https://github.com/Bogomip/ngx-mazes" target="_blank">GitHub</a>
-                    <div class="portfolio__minor--link playVideoLink" data-link="/apollo/Apollo 0.95(1).mp4">Play Video</div>
+                    <div class="portfolio__minor--link playVideoLink" data-link="/ngx-mazes/mazegeneration.mp4">Play Video</div>
                 </div>
     
             </div>
@@ -312,7 +317,7 @@
             <div class="portfolio__site--minor" id="portfolio6">
                 
                 <div class="portfolio__site--background">
-                    <video src="./images/portfolio/apollo/Apollo 0.95(1).mp4" class="portfolio__video" loop></video>
+                    <video src="./images/portfolio/ag/agVideo.mp4" class="portfolio__video"  loop></video>
                 </div>
                 <div class="portfolio__site--name portfolio__site--name--ags">
                     Academic Games Scorer
@@ -333,13 +338,11 @@
                 <div class="portfolio__minor--links">
                     <a class="portfolio__minor--link" href="https://ag.sweeto.co.uk/" target="_blank">Live</a>
                     <a class="portfolio__minor--link" href="https://github.com/Bogomip/Academic-Games" target="_blank">GitHub</a>
-                    <div class="portfolio__minor--link playVideoLink" data-link="/apollo/Apollo 0.95(1).mp4">Play Video</div>
+                    <div class="portfolio__minor--link playVideoLink" data-link="/ag/agVideo.mp4">Play Video</div>
                 </div>
     
             </div>
         </div>
-    
-        <h1 class="header-section mt-lg mb-lg">Other Projects</h1>
 
 
     </section>

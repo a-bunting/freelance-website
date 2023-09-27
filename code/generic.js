@@ -60,6 +60,7 @@ function toggleOverlay(link) {
     let overlay = document.getElementById("video-popup");
     let video = document.getElementById('fullScreenVideo');
     let button = document.getElementById("videoPlayPauseButton")
+    let closeButton = document.getElementById("videoCloseButton")
 
     if(link) {
         // open the overlay
@@ -68,23 +69,28 @@ function toggleOverlay(link) {
         
         // overlay opens so add the play pause listener
         button.addEventListener("click", togglePlayVideo, false);
+        video.addEventListener("click", togglePlayVideo, false);
 
         // and add something to remove it too if the background is clicked...
         overlay.addEventListener("click", (event) => { removeOverlay(event); }, false);
+        closeButton.addEventListener("click", (event) => { removeOverlay(event); }, false);
         
         video.setAttribute('src', link);
     }
 }
 
 function removeOverlay(event) {
+    console.log(event.target.id);
 
-    if(event.target.id === 'video-popup') {
+    if(event.target.id === 'video-popup' || event.target.id === 'videoCloseButton' || event.target.id === 'closeVideoInPortraitButton') {
         let overlay = document.getElementById("video-popup");
         let button = document.getElementById("videoPlayPauseButton")
         let video = document.getElementById('fullScreenVideo');
+        let closeButton = document.getElementById("videoCloseButton")
 
         // remove the click evebnt listener
         button.removeEventListener("click", togglePlayVideo, false);
+        closeButton.removeEventListener("click", toggleOverlay(null), false);
         overlay.removeEventListener("click", toggleOverlay(null), false);
 
         // remove the overlay
@@ -103,6 +109,7 @@ function togglePlayVideo(onOff) {
     // get the display elements
     let overlay = document.getElementById("video-popup");
     let button = document.getElementById("videoPlayPauseButton");
+    let buttonImage = document.getElementById("playVideoButtonImage");
 
     // get the video...
     let video = document.getElementById('fullScreenVideo');
@@ -111,10 +118,12 @@ function togglePlayVideo(onOff) {
     if(playVideo) {
         button.classList.remove("video-popup__playpause--play");
         button.classList.add("video-popup__playpause--pause");
+        buttonImage.setAttribute("src", "./images/icons/pause2.png")
         video.play();
     } else {
         button.classList.add("video-popup__playpause--play");
         button.classList.remove("video-popup__playpause--pause");
+        buttonImage.setAttribute("src", "./images/icons/play3.png")
         video.pause();
     }
 }
@@ -177,8 +186,10 @@ function setContactMessage(message) {
     
     if(message !== "") {
         sentElement.style.padding = ".5rem 1rem";
+        sentElement.style.backgroundColor = "#dc3d24";
     } else {
         sentElement.style.padding = "0";
+        sentElement.style.backgroundColor = "#0e1111";
     }
     sentElement.innerHTML = message;
 }
@@ -200,7 +211,7 @@ let animationIndex = 0;
 function launchWebDeveloperAnimations() {
     const classes = ['basic', 'wordle'];
     const div = document.getElementById('header__title');
-    const time = 5;
+    const time = 15;
 
     // set the delay time;
     div.style.animationDuration = `${time * 0.5}s`;

@@ -44,6 +44,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @media screen and (max-width: 600px) {
+                justify-content: center;
+            }
         }
 
         &--links {
@@ -74,8 +78,13 @@
             margin-right: 2.5rem;
             width: 10rem;
             text-align: center;
-            color: white;
+            color: black;
+            font-weight: bold;
             text-decoration: none;
+
+            @media screen and (min-width: 1800px) {
+                width: 14rem;
+            }
 
             &:hover {
                 cursor: pointer;
@@ -93,11 +102,16 @@
             font-size: 1.5rem;
             line-height: 2.4rem;
             letter-spacing: .1rem;
+            color: white;
         }
 
         &--skills {
             display: flex;
             align-items: center;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
         }
 
         &--skill {
@@ -314,6 +328,7 @@
                 font-weight: bold;
                 font-size: 4rem;
                 width: 100%;
+                text-align: center;
             }
         }
 
@@ -455,6 +470,7 @@
             width: 16rem;
             text-align: center;
             color: black;
+            font-weight: bold;
             text-decoration: none;
 
             a, a:active, a:visited {
