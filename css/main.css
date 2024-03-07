@@ -1701,6 +1701,9 @@ header {
   }
 }
 .video-popup__close {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
   visibility: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1709,9 +1712,6 @@ header {
 @media screen and (orientation: landscape) and (max-height: 600px) {
   .video-popup__close {
     visibility: visible;
-    position: absolute;
-    bottom: 3rem;
-    right: 3rem;
     background-color: rgba(53, 56, 57, 0.6);
     box-shadow: 0.2rem 0 0.4rem rgba(0, 0, 0, 0.5);
     border-radius: 50%;

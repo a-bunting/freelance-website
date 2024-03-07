@@ -49,15 +49,16 @@
     }
 
     &__close {
+
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
         visibility: hidden;
         user-select: none;
         
         @media screen and (orientation: landscape) and (max-height: 600px) {
+            
             visibility: visible;
-            position: absolute;
-            bottom: 3rem;
-            right: 3rem;
-
             background-color: rgba($color-primary-light, .6);
             box-shadow: .2rem 0 .4rem rgba(black, .5);
             border-radius: 50%;
